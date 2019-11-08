@@ -1,0 +1,31 @@
+.top-header
+  .header-line
+    = link_to "新規投稿", new_diary_path(@diary)
+  .activemessage
+  .nav
+    .navvar
+      = image_tag "photo.jpeg", class: 'img1', alt: "顔写真1"
+.wrapper
+  .header
+    .header_left
+      .header_left_home
+        -# = link_to "新規投稿", new_diary_path(@diary)
+    .header_right
+      .header_right_log
+    -#   = link_to new_group_path do
+  .diaries
+    .diary
+      kazuya
+      .calendar
+    .diary
+      kaka
+    .diary
+      ロックンロール
+  .footer
+    .footer-last
+      %p
+        犬っころ
+      %p
+        にゃんこ
+      %p
+        おにゃんこ

@@ -1,0 +1,15 @@
+= form_for @diary do |f|
+  .new-wrapper
+    .header-yes
+      .header-line
+        = link_to "トップへ", root_path(@diary)
+    .contents
+      %p 日記作成
+      .title
+        -# =form_with model: @diary, local: true do |form|
+        -#   =form.text_field :content
+        -# = f.text_field :title, class: 'diary__title__input', placeholder: 'タイトルを入力してください'
+      .posts
+      .foot
+        = f.submit class: 'form'
+  
