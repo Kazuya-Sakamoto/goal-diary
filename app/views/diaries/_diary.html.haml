@@ -1,9 +1,10 @@
 .diary
   .card-list
-    .card-item
-      .card-img
-        = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
-      .card-text
-        = diary.title
-      .card-content
-        = diary.content
+    = link_to diary_path(diary.id) do
+      .card-item
+        .card-img
+          = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
+        .card-title
+          = diary.title
+        .card-content
+          = diary.content

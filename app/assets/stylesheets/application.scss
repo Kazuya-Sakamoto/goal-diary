@@ -1,4 +1,7 @@
 @import "./reset";
+body{
+  font-family: 'arial unicode ms';
+}
 .top-header{
   height: 75vh;
   width: 100vw;
@@ -72,10 +75,11 @@
     .navvar{
       height: 100%;
       .img1{
-        background-image: url("/Users/sakamotokazuya/goal-diary/app/assets/images/photo.jpeg"); 
+        // background-image: url("/Users/sakamotokazuya/goal-diary/app/assets/images/photo.jpeg"); 
         width: 100%;
         animation: blinkAnime 1s infinite alternate;
         opacity : 0.9;
+        height: 100%;
       }
       .over{
         position   : absolute;                   /* 親要素からの絶対位置 */
@@ -130,7 +134,7 @@
     background-color:#FFFFFF;
     .diary{
         display: inline-block;
-        width: 44%;
+        width: 30%;
         // height: 70%;
         // background-color: #FFFFFF;
         // display: inline-block;
@@ -143,29 +147,35 @@
         // border-radius: 9px;
       .card-list{
         // display: inline-block;
-        padding: 10vh 4vw 10vh 5vw;
+        padding: 4vh 4vw 4vh 5vw;
         width: 100%;
+        color:white;
         // display: flex;
         // justify-content: space-between;
         .card-item{
           display: inline-block;
-          width: 80%;
+          width: 92%;
           border: 3px solid #453523;
           .card-img{
             position: relative;
             .img{
               width: 100%;
+              height: 25vh;
               opacity : 0.7;
             }
           }
-        }
-        .card-text{
-          color: #453523;
-          font-size: 20px;
-          text-align: center;
-          // width: 100px;
-          height: 100px;
-          font-weight:bold;
+          .card-title{
+            color: #453523;
+            font-size: 20px;
+            text-align: center;
+            // width: 100px;
+            height: 3vh;
+            font-weight:bold;
+          }
+          .card-content{
+            color: #453523;
+            display: inline;
+          }
         }
       }
     }
