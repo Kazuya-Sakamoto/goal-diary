@@ -1,10 +1,19 @@
 .top-header
   .header-line
     = link_to "新規投稿", new_diary_path(@diary)
+    .header-right
+    .header-middle
+      .searchArea
+        .searchText
+        .searchButton
+    .header-left
+
   .activemessage
   .nav
     .navvar
       = image_tag "photo.jpeg", class: 'img1', alt: "顔写真1"
+      .over
+        Start Line
 .wrapper
   .header
     .header_left
@@ -14,18 +23,10 @@
       .header_right_log
     -#   = link_to new_group_path do
   .diaries
-    .diary
-      kazuya
-      .calendar
-    .diary
-      kaka
-    .diary
-      ロックンロール
+    = render @diaries
+    
   .footer
     .footer-last
       %p
         犬っころ
-      %p
-        にゃんこ
-      %p
-        おにゃんこ
+      

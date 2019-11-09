@@ -1,0 +1,9 @@
+.diary
+  .card-list
+    .card-item
+      .card-img
+        = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
+      .card-text
+        = diary.title
+      .card-content
+        = diary.content
