@@ -1,18 +1,19 @@
 class DiariesController < ApplicationController
-    def index
-        @diaries = Diary.all
-    end
+  def index
+    @diaries = Diary.all
+  end
 
-    def new
-        @diary = Diary.new
-    end
+  def new
+    @diary = Diary.new
+  end
 
-    def create
-        @diary = Diary.create(diary_params)
-    end
+  def create
+    @diary = Diary.create(diary_params)
+    redirect_to root_path(@diary)
+  end
 
-    private
-    def diary_params
+  private
+  def diary_params
     params.require(:diary).permit(:title, :content, :image)
-    end
+  end
 end

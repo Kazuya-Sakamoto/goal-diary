@@ -1,15 +1,16 @@
-= form_for @diary do |f|
+= form_with model: @diary, loacal: true do |f|
   .new-wrapper
     .header-yes
       .header-line
         = link_to "トップへ", root_path(@diary)
     .contents
       %p 日記作成
-      .title
-        -# =form_with model: @diary, local: true do |form|
-        -#   =form.text_field :content
-        -# = f.text_field :title, class: 'diary__title__input', placeholder: 'タイトルを入力してください'
+      .text
+        = f.text_field :title, placeholder: :タイトル, class: :title
+        -# = f.text_field :title, class: 'text', 
+      .image-space
+        = f.file_field :image, placeholder: :画像投稿, class: :button
       .posts
+        = f.text_area :content, placeholder: :本文記述欄, class: :content
       .foot
-        = f.submit class: 'form'
-  
+        = f.submit '投稿する', class: 'form'

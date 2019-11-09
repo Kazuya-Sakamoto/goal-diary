@@ -13,10 +13,9 @@
 ActiveRecord::Schema.define(version: 2019_11_07_032427) do
 
   create_table "diaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "name"
-    t.string "title"
-    t.string "content"
-    t.text "image"
+    t.string "title", null: false
+    t.string "content", null: false
+    t.string "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
