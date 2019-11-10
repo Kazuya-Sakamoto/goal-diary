@@ -4,6 +4,7 @@
       - if user_signed_in? 
         = link_to "新規投稿", new_diary_path(@diary), class: 'toukou'
         = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
+        = link_to current_user.nickname, user_path(current_user), class: 'user-name'
     .header-left
       = link_to "ログイン", new_user_session_path, class: 'log-in'
       = link_to "新規登録", new_user_registration_path, class: 'new-user'

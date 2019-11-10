@@ -1,0 +1,10 @@
+.wrap
+  .wrap-line
+  .user-main
+    .user-top
+      .user-image
+        = image_tag @user.image.url, class: 'img-profile' if @user.image.present?
+        .user-profile
+.wrapper
+  .diaries
+    = render @diaries

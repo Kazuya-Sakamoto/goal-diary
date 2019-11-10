@@ -7,7 +7,6 @@ body{
   width: 100vw;
   border-bottom: 1px solid #e6e6e6;
   .header-line{
-    // margin-top: 0px;
     height: 9vh;
     background-color: white;
     border-bottom: 1px solid #453523;
@@ -15,7 +14,6 @@ body{
       width: 30%;
       height: 100%;
       float:right;
-      // background-color: #666666;
       .toukou{
         font-size: 2.5vh;
         color: #453523;
@@ -27,47 +25,7 @@ body{
       width: 30%;
       height: 100%;
       float: left;
-      // background-color: yellow;
       margin-top: 0;
-    }
-      // .serchArea{
-        // width          : 100%;              /* BOXの幅               */
-        // height         : 100%;               /* BOXの高さ             */
-        // margin         : auto;               /* サンプルを中心に寄せ  */
-        // letter-spacing : 0.1em;              /* 文字間隔              */
-        // font-weight    : bold;               /* 太字                  */
-        // line-height    : 0;                  /* 標準の行高さ */
-        // .searchText{
-        //   display        : block;              /* ブロック化            */
-        //   float          : left;               /* 横並び                */
-        //   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-        //   height         : 24px;               /* 入力の高さ            */
-        //   width          : 170px;              /* 入力の幅              */
-        //   margin         : 0;                  /* 外余白                */
-        //   padding        : 0 12px;             /* 内余白                */
-        //   border         : 2px solid #007fff;  /* 枠線　幅,実践,色      */
-        //   border-radius  : 12px 0 0 12px;      /* 左上下の角丸          */
-        //   color          : #333;               /* 文字色                */
-        //   outline        : 0;                  /* 入力の薄い枠を非表示  */
-        //   font-size      : 12px;               /* フォントサイズ        */      
-        // }
-        // .searchButton{
-        //   float          : left;               /* 横並び                */
-        //   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-        //   height         : 24px;               /* 入力の高さ            */
-        //   margin         : 0;                  /* 外余白                */
-        //   padding        : 6px 10px;           /* 内余白                */
-        //   border         : none;               /* 枠線　幅,実践,色      */
-        //   border-radius  : 0 12px 12px 0;      /* 右上下の角丸          */
-        //   background     : #007fff;            /* ボタンの色            */
-        //   color          : #fff;               /* 文字色                */
-        //   cursor         : pointer;            /* カーソル設定          */
-        //   line-height    : 12px;               /* 1行の高さ             */
-        //   font-size      : 12px;               /* フォントサイズ        */
-        // }
-    // }
-    .post{
-      color: white;
     }
   }
   .activemessage{
@@ -77,63 +35,48 @@ body{
   }
   .nav{
     height: 65vh;
-    // width: 100vw;
-    // background-color: #ffffff;
-    // .navvar{
-    //   width: 100%;
-    //   height: 20vh;
     .navvar{
       height: 100%;
       .img1{
-        // background-image: url("/Users/sakamotokazuya/goal-diary/app/assets/images/photo.jpeg"); 
         width: 100%;
         animation: blinkAnime 1s infinite alternate;
-        // opacity : 0.9;
         height: 100%;
       }
       .over{
-        position   : absolute;                   /* 親要素からの絶対位置 */
+        position   : absolute;                  
         box-sizing : border-box;
-        white-space: nowrap;                     /* 折返しなし */
-        display    : block;                      /* ブロック要素にする */
-        width      : 100%;                       /* 親要素の幅に合わせる */
-        color      : rgba(0, 0, 0, 0.59);    /* 文字色（透明度） */
-        background : rgba(255, 255, 255, 0.15);  /* 背景色（透明度） */
-        top        : 50%;                        /* 親要素からの上位置 */
-        left       : 0;                          /* 親要素からの左位置 */
-        text-align : center;                     /* 文字位置 */
-        transform  : translateY(-50%);           /* 文字BOXの位置ずらし */
-        padding    : 10px;                       /* BOX内の余白 */
-        font-size  : 45pt;                       /* 文字サイズ */
-        font-weight: bold;                       /* 太字 */
-        line-height: 1em;                        /* 1行の高さ */             
+        white-space: nowrap;                   
+        display    : block;                      
+        width      : 100%;                      
+        color      : rgba(0, 0, 0, 0.445);   
+        background : rgba(255, 255, 255, 0.041);  
+        top        : 50%;                        
+        left       : 0;                         
+        text-align : center;               
+        transform  : translateY(-50%);        
+        padding    : 10px;                   
+        font-size  : 45pt;                   
+        font-weight: bold;               
       }
     }
   }
 } 
 
-
 .wrapper{
     height: 100vh;
     width: 100vw;
     background-color: #FFFFFF;
-    // background-color: aqua;
     margin: 0 auto;
-    // position: fixed;
     position: relative;
   .header{
     border-top: 3px solid #ae8c5f;
     height: 3vh;
     background-color: #453523; 
-    // display: flex;
     &__left{
         float: left;
         width: 20vw;
         height: 10vh;
         background-color: #FFFFFF;
-      &__home{
-        // text-align: center;
-      }
     }
   }
   .diaries{
@@ -145,27 +88,13 @@ body{
     .diary{
         display: inline-block;
         width: 30%;
-        // height: 70%;
-        // background-color: #FFFFFF;
-        // display: inline-block;
-        // border-bottom: 4px double #663300;
-        // padding: 50px;
-        // margin: 3px ;
-        // color: black;
-        // background: white;
-        // border-bottom: solid 10px white;
-        // border-radius: 9px;
       .card-list{
-        // display: inline-block;
         padding: 5vh 4vw 5vh 5vw;
         width: 100%;
         color:white;
-        // display: flex;
-        // justify-content: space-between;
         .card-item{
           display: inline-block;
           width: 92%;
-          // border: 3px solid #453523;
           .card-img{
             position: relative;
             .img{
@@ -179,7 +108,6 @@ body{
             color: #453523;
             font-size: 20px;
             text-align: center;
-            // width: 100px;
             height: 3vh;
             font-weight:bold;
           }
@@ -199,13 +127,11 @@ body{
     height: 5vh;
     width: 100%;
     background-color:#453523;
-    // position: absolute;
     bottom: 0;
     display: flex;
     .footer-last{
       height: 5vh;
       width: 50%;
-      // background-color: aqua;
       bottom: 0%;
       margin: 0 auto;
       p{
@@ -247,7 +173,6 @@ body{
       color: #453523;
       font-weight: bolder;
     }
-
     .text{
       width: 50%;
       height: 15%;
@@ -260,26 +185,9 @@ body{
       }
     }
     .image-space{
-      // width: 20vw;
-      // height: 20vh;
-      // margin: 0 auto;
       .button{
         width: 10vw;
         height: 6vh;
-      }
-      input{
-        // display       : inline-block;
-        // border-radius : 5%;          /* 角丸       */
-        // font-size     : 18pt;        /* 文字サイズ */
-        // text-align    : center;      /* 文字位置   */
-        // cursor        : pointer;     /* カーソル   */
-        // padding       : 12px 12px;   /* 余白       */
-        // background    : #000066;     /* 背景色     */
-        // color         : #ffffff;     /* 文字色     */
-        // line-height   : 1em;         /* 1行の高さ  */
-        // transition    : .3s;         /* なめらか変化 */
-        // box-shadow    : 6px 6px 3px #666666;  /* 影の設定 */
-        // border        : 2px solid #000066;    /* 枠の指定 */
       }
     }
     
@@ -293,7 +201,6 @@ body{
         border: solid 3px #453523;
         font-size: 20px;
       }
-
     }
     .foot{
       width: 100%;
@@ -301,26 +208,60 @@ body{
       position: absolute;
       bottom: 0px;
       .form{
-        // margin-left: 25vw;
         margin-top:10vh;
-        box-shadow: none;        /* カーソル時の影消去 */
-        color: #7f4600;     /* 背景色     */
-        background: #ffffff;     /* 文字色     */
+        box-shadow: none;      
+        color: #7f4600;     
+        background: #ffffff;    
         display: inline-block;
-        border-radius : 5%;          /* 角丸       */
-        font-size : 15pt;        /* 文字サイズ */
-        text-align : center;      /* 文字位置   */
-        cursor : pointer;     /* カーソル   */
-        padding: 12px 12px;   /* 余白       */
-        background : #7f4600;     /* 背景色     */
-        color: #ffffff;     /* 文字色     */
-        line-height: 1em;         /* 1行の高さ  */
-        transition: .3s;         /* なめらか変化 */
-        box-shadow : 2px 2px 19px #666666;  /* 影の設定 */
-        border: 2px solid #7f4600;    /* 枠の指定 */
+        border-radius : 5%;        
+        font-size : 15pt;       
+        text-align : center;      
+        cursor : pointer;    
+        padding: 12px 12px;   
+        background : #7f4600;    
+        color: #ffffff;    
+        line-height: 1em;     
+        transition: .3s;        
+        box-shadow : 2px 2px 19px #666666;  
+        border: 2px solid #7f4600;    
       }
     }
   }
 }
 
-// 新規ログイン
+// ユーザープロフィール
+.wrap{
+  width: 100vw;
+  height: 50vh;
+  .wrap-line{
+    top: 0;
+    width: 100vw;
+    height: 8vh;
+    border-bottom: 10px solid #453523;
+  }
+  .user-main{
+    height: 80%;
+    .user-top{
+      height: 40vh;
+      .user-image{
+        width: 100vw;
+        height: 100%;
+        .img-profile{
+          width: 18vw;
+          height: 30vh;
+          border-radius:70%;
+          margin-left: 7vw;
+          margin-top: 4vh;
+        }
+          .user-profile{
+            width:63vw;
+            height: 25vh;
+            margin-right:7vw ;
+            margin-top: 7vh;
+            border: 2px solid #453523;
+            float: right;
+          }
+      }           
+    }
+  }
+}
