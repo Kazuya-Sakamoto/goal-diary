@@ -66,3 +66,5 @@ gem 'haml-rails'
 gem 'pry-rails'
 
 gem 'carrierwave'
+
+gem 'devise'

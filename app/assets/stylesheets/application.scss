@@ -3,7 +3,7 @@ body{
   font-family: 'arial unicode ms';
 }
 .top-header{
-  height: 75vh;
+  height: 65vh;
   width: 100vw;
   border-bottom: 1px solid #e6e6e6;
   .header-line{
@@ -12,50 +12,60 @@ body{
     background-color: white;
     border-bottom: 1px solid #453523;
     .header-right{
-      width: 20%;
+      width: 30%;
       height: 100%;
       float:right;
-      background-color: #666666;
-    }
-    .serchArea{
-      width          : 100%;              /* BOXの幅               */
-      height         : 100%;               /* BOXの高さ             */
-      margin         : auto;               /* サンプルを中心に寄せ  */
-      letter-spacing : 0.1em;              /* 文字間隔              */
-      font-weight    : bold;               /* 太字                  */
-      line-height    : 0;                  /* 標準の行高さ */
-      .searchText{
-        display        : block;              /* ブロック化            */
-        float          : left;               /* 横並び                */
-        box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-        height         : 24px;               /* 入力の高さ            */
-        width          : 170px;              /* 入力の幅              */
-        margin         : 0;                  /* 外余白                */
-        padding        : 0 12px;             /* 内余白                */
-        border         : 2px solid #007fff;  /* 枠線　幅,実践,色      */
-        border-radius  : 12px 0 0 12px;      /* 左上下の角丸          */
-        color          : #333;               /* 文字色                */
-        outline        : 0;                  /* 入力の薄い枠を非表示  */
-        font-size      : 12px;               /* フォントサイズ        */      
-      }
-      .searchButton{
-        float          : left;               /* 横並び                */
-        box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
-        height         : 24px;               /* 入力の高さ            */
-        margin         : 0;                  /* 外余白                */
-        padding        : 6px 10px;           /* 内余白                */
-        border         : none;               /* 枠線　幅,実践,色      */
-        border-radius  : 0 12px 12px 0;      /* 右上下の角丸          */
-        background     : #007fff;            /* ボタンの色            */
-        color          : #fff;               /* 文字色                */
-        cursor         : pointer;            /* カーソル設定          */
-        line-height    : 12px;               /* 1行の高さ             */
-        font-size      : 12px;               /* フォントサイズ        */
+      // background-color: #666666;
+      .toukou{
+        font-size: 2.5vh;
+        color: #453523;
+        float:right;
+        margin-right: 2vw;
       }
     }
     .header-left{
-
+      width: 30%;
+      height: 100%;
+      float: left;
+      // background-color: yellow;
+      margin-top: 0;
     }
+      // .serchArea{
+        // width          : 100%;              /* BOXの幅               */
+        // height         : 100%;               /* BOXの高さ             */
+        // margin         : auto;               /* サンプルを中心に寄せ  */
+        // letter-spacing : 0.1em;              /* 文字間隔              */
+        // font-weight    : bold;               /* 太字                  */
+        // line-height    : 0;                  /* 標準の行高さ */
+        // .searchText{
+        //   display        : block;              /* ブロック化            */
+        //   float          : left;               /* 横並び                */
+        //   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+        //   height         : 24px;               /* 入力の高さ            */
+        //   width          : 170px;              /* 入力の幅              */
+        //   margin         : 0;                  /* 外余白                */
+        //   padding        : 0 12px;             /* 内余白                */
+        //   border         : 2px solid #007fff;  /* 枠線　幅,実践,色      */
+        //   border-radius  : 12px 0 0 12px;      /* 左上下の角丸          */
+        //   color          : #333;               /* 文字色                */
+        //   outline        : 0;                  /* 入力の薄い枠を非表示  */
+        //   font-size      : 12px;               /* フォントサイズ        */      
+        // }
+        // .searchButton{
+        //   float          : left;               /* 横並び                */
+        //   box-sizing     : border-box;         /* 枠線,余白を含んだ長さ */
+        //   height         : 24px;               /* 入力の高さ            */
+        //   margin         : 0;                  /* 外余白                */
+        //   padding        : 6px 10px;           /* 内余白                */
+        //   border         : none;               /* 枠線　幅,実践,色      */
+        //   border-radius  : 0 12px 12px 0;      /* 右上下の角丸          */
+        //   background     : #007fff;            /* ボタンの色            */
+        //   color          : #fff;               /* 文字色                */
+        //   cursor         : pointer;            /* カーソル設定          */
+        //   line-height    : 12px;               /* 1行の高さ             */
+        //   font-size      : 12px;               /* フォントサイズ        */
+        // }
+    // }
     .post{
       color: white;
     }
@@ -78,7 +88,7 @@ body{
         // background-image: url("/Users/sakamotokazuya/goal-diary/app/assets/images/photo.jpeg"); 
         width: 100%;
         animation: blinkAnime 1s infinite alternate;
-        opacity : 0.9;
+        // opacity : 0.9;
         height: 100%;
       }
       .over{
@@ -115,7 +125,7 @@ body{
     border-top: 3px solid #ae8c5f;
     height: 3vh;
     background-color: #453523; 
-    display: flex;
+    // display: flex;
     &__left{
         float: left;
         width: 20vw;
@@ -127,7 +137,7 @@ body{
     }
   }
   .diaries{
-    height: 80%;
+    height: 92%;
     width: 90vw;
     overflow: scroll;
     margin: 0 auto;
@@ -147,7 +157,7 @@ body{
         // border-radius: 9px;
       .card-list{
         // display: inline-block;
-        padding: 4vh 4vw 4vh 5vw;
+        padding: 5vh 4vw 5vh 5vw;
         width: 100%;
         color:white;
         // display: flex;
@@ -155,13 +165,14 @@ body{
         .card-item{
           display: inline-block;
           width: 92%;
-          border: 3px solid #453523;
+          // border: 3px solid #453523;
           .card-img{
             position: relative;
             .img{
               width: 100%;
               height: 25vh;
               opacity : 0.7;
+              border-radius: 5%;
             }
           }
           .card-title{
@@ -175,27 +186,33 @@ body{
           .card-content{
             color: #453523;
             display: inline;
+            .content-name{
+              float: right;
+              color: #DEB887;
+            }
           }
         }
       }
     }
   }
   .footer{
-    height: 10vh;
+    height: 5vh;
     width: 100%;
     background-color:#453523;
-    position: absolute;
+    // position: absolute;
     bottom: 0;
     display: flex;
     .footer-last{
-      height: 10vh;
+      height: 5vh;
       width: 50%;
       // background-color: aqua;
       bottom: 0%;
+      margin: 0 auto;
       p{
         margin-top: 2vh;
-        color: #FFFFFF;
-        margin-left: 5vw;
+        color: #ffffff;
+        margin-left: 15vw;
+        size: 1px;
       }
     }
   }
@@ -248,7 +265,7 @@ body{
       // margin: 0 auto;
       .button{
         width: 10vw;
-        height: 5vh;
+        height: 6vh;
       }
       input{
         // display       : inline-block;
@@ -306,4 +323,4 @@ body{
   }
 }
 
-
+// 新規ログイン

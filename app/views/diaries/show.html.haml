@@ -12,3 +12,4 @@
   .nav
     .navvar
       = image_tag @diary.image.url, class: 'img1', alt: "顔写真1"
+      = link_to "編集", edit_diary_path(@diary.id), class:"edit"
