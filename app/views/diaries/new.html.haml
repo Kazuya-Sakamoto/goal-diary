@@ -7,7 +7,8 @@
       %p 日記作成
       .text
         = f.text_field :title, placeholder: :タイトル, class: :title
-        -# = f.text_field :title, class: 'text', 
+      .date
+        = f.date_field :goal, placeholder: :目標の日にち, class: :date
       .image-space
         = f.file_field :image, placeholder: :画像投稿, class: :button
       .posts

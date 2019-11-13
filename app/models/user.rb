@@ -7,4 +7,5 @@ class User < ApplicationRecord
         mount_uploader :image, ImagesUploader
         
         has_many :diaries
+        has_many :goals
 end

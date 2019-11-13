@@ -6,7 +6,9 @@
           .img:hover
             = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
         .card-title
-          = diary.title
+          目標達成まで
+          = diary.date.ceil(0)
+          日
         .card-content
           = diary.content
           .content-name

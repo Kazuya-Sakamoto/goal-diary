@@ -5,11 +5,12 @@ class DiariesController < ApplicationController
 
   def new
     @diary = Diary.new
+    
   end
 
   def create
     @diary = Diary.create(diary_params)
-    redirect_to root_path(@diary)
+    redirect_to root_path(@diary) 
   end
 
   def edit
@@ -33,6 +34,6 @@ class DiariesController < ApplicationController
 
   private
   def diary_params
-    params.require(:diary).permit(:title, :content, :image).merge(user_id: current_user.id)
+    params.require(:diary).permit(:title, :content, :image, :goal).merge(user_id: current_user.id)
   end
 end
