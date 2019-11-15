@@ -5,7 +5,7 @@ class Diary < ApplicationRecord
     belongs_to :user
     has_many :comments
     has_many :likes, dependent: :destroy
-    validates :content, length: { in: 1..100 }
+    validates :content, length: { in: 1..1000 }
 
     def date
       d1 = self.created_at

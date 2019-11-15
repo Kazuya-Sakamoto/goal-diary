@@ -8,19 +8,18 @@ class DiariesController < ApplicationController
   end
 
   def update
-    @diary = Diary.find(params[:id])
+    diary = Diary.find(params[:id])
     diary.update(diary_params)
     redirect_to diary_path(diary.id)
   end
 
   def new
     @diary = Diary.new
-    @diary = Diary.find(params[:id])
   end
 
   def create
-    diary.update(diary_params)
-    redirect_to diary_path(diary.id)
+    Diary.create(diary_params)
+    redirect_to root_path
   end
   
   def destroy
@@ -37,6 +36,6 @@ class DiariesController < ApplicationController
 
   private
   def diary_params
-    params.require(:diary).permit(:title, :content, :image, :goal).merge(user_id: current_user.id)
+    params.require(:diary).permit(:content, :image, :goal).merge(user_id: current_user.id)
   end
 end
