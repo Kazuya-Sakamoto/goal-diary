@@ -2,17 +2,7 @@ class DiariesController < ApplicationController
   def index
     @diaries = Diary.includes(:user)
   end
-
-  def new
-    @diary = Diary.new
-    
-  end
-
-  def create
-    @diary = Diary.create(diary_params)
-    redirect_to root_path(@diary) 
-  end
-
+  
   def edit
     @diary = Diary.find(params[:id])
   end
@@ -22,6 +12,17 @@ class DiariesController < ApplicationController
     diary.update(diary_params)
     redirect_to diary_path(diary.id)
   end
+
+  def new
+    @diary = Diary.new
+    @diary = Diary.find(params[:id])
+  end
+
+  def create
+    diary.update(diary_params)
+    redirect_to diary_path(diary.id)
+  end
+  
   def destroy
     diary = Diary.find(params[:id])
     diary.destroy
@@ -30,6 +31,8 @@ class DiariesController < ApplicationController
 
   def show
     @diary = Diary.find(params[:id])
+    @comment = Comment.new
+    @comments = @diary.comments.includes(:user)
   end
 
   private

@@ -1,3 +1,15 @@
-.new-wrapper
-  .header-yes
-    .header-line
+= render partial: "header"
+= form_with model: @diary, local: true do |f|
+  .new-wrapper
+    .contents
+      %p 編集
+      .text
+        = f.text_field :title, placeholder: :タイトル, class: :title
+      .date
+        = f.date_field :goal, placeholder: :目標の日にち, class: :date
+      .image-space
+        = f.file_field :image, placeholder: :画像投稿, class: :button
+      .posts
+        = f.text_area :content, placeholder: :本文記述欄, class: :content
+      .foot
+        = f.submit '投稿する', class: 'form'

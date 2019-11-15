@@ -1,0 +1,10 @@
+- if !current_user?(dairy.user)
+  .like
+  -if diary.iine?(current_user)
+    = form_with model: @diary.likes.find_by(user_id: current_user.id), method: :delete do |f|
+      = button_tag class: 'btn' do
+        = content_tag :span, url:"#{micropost.likes_count}", class: 'heart'
+    = form_with model: @diary.likes.build do |f|
+      = hidden_field_tag :diary_id, diary.id
+      = button_tag class: 'btn' do
+        = content_tag :span, url:"#{micropost.likes_count}", class: 'heart-empty'

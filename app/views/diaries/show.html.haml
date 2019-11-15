@@ -1,15 +1,31 @@
-.top-header
-  .header-line
-    = link_to "トップへ", root_path(@diary)
-    .header-right
-    .header-middle
-      .searchArea
-        .searchText
-        .searchButton
-    .header-left
-
-  .activemessage
-  .nav
-    .navvar
-      = image_tag @diary.image.url, class: 'img1', alt: "顔写真1"
-      = link_to "編集", edit_diary_path(@diary.id), class:"edit"
+.wapper-7  
+  = render partial: "header"
+  .wrapper-down
+    .content-image
+      .wrapper-image
+        = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
+      .wrapper-content
+        = @diary.user.nickname
+        .top-title
+          残り
+          = @diary.date.ceil(0)
+          日
+        = @diary.content
+      .comment-wrap
+        .comments
+          - if user_signed_in?
+            = form_with model: [@diary, @comment], local: true do |f|
+              = f.text_area :text, placeholder: :コメント
+              = f.submit 'send'
+        .comment-part
+          コメント一覧
+          - if @comments.length != 0
+            - @comments.each do |c|
+            %p
+              %strong
+                = link_to c.user.nickname
+                  = c.text
+      .button-12
+        = link_to "編集", edit_diary_path(@diary.id), class:"edit"
+        = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
+      

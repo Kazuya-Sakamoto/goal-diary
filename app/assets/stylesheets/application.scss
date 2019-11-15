@@ -202,87 +202,69 @@ body{
 // -------------------------------------------------------
 
 // 新規投稿ページ-----------------------------------------
-.new-wrapper{
-  width: 100vw;
-  height: 100vh;
-  .header-yes{
-    width: 100%;
-    height: 8vh;
-    border-bottom: 10px double #ae8c5f;
-    .header-line{
+.contents{
+  width: 80%;
+  height: 80%;
+  margin: 0 auto;
+  margin-top: 30px;
+  background-color: #ffffff;
+  padding: 0;
+  text-align: center;
+  font-size: 40px;
+  position: relative;
+  p{
+    font-size: 30px;
+    margin-top: 0;
+    color: #453523;
+    font-weight: bolder;
+  }
+  .date{
+   
+  }
+  .image-space{
+    .button{
+      width: 10vw;
+      height: 6vh;
     }
   }
-  .contents{
-    width: 80%;
-    height: 80%;
-    margin: 0 auto;
-    margin-top: 30px;
-    background-color: #ffffff;
-    padding: 0;
-    text-align: center;
-    font-size: 40px;
-    position: relative;
-    p{
-      font-size: 30px;
-      margin-top: 0;
-      color: #453523;
-      font-weight: bolder;
+  
+  .posts{
+    width: 80vw;
+    height: 40vh;
+    .content{
+      width: 80%;
+      height: 80%;
+      margin: 20px 0px 0px 0px;
+      border: solid 3px #453523;
+      font-size: 20px;
     }
-    .text{
-      width: 50%;
-      height: 15%;
-      margin: 0 auto;
-      .title{
-        height: 60%;
-        width: 80%;
-        border: solid 3px #453523;
-        font-size: 25px;
-      }
-    }
-    .image-space{
-      .button{
-        width: 10vw;
-        height: 6vh;
-      }
-    }
-    
-    .posts{
-      width: 80vw;
-      height: 40vh;
-      .content{
-        width: 80%;
-        height: 80%;
-        margin: 20px 0px 0px 0px;
-        border: solid 3px #453523;
-        font-size: 20px;
-      }
-    }
-    .foot{
-      width: 100%;
-      height: 20vh;
-      position: absolute;
-      bottom: 0px;
-      .form{
-        margin-top:10vh;
-        box-shadow: none;      
-        color: #7f4600;     
-        background: #ffffff;    
-        display: inline-block;
-        border-radius : 5%;        
-        font-size : 15pt;       
-        text-align : center;      
-        cursor : pointer;    
-        padding: 12px 12px;   
-        background : #7f4600;    
-        color: #ffffff;    
-        line-height: 1em;     
-        transition: .3s;        
-        box-shadow : 2px 2px 19px #666666;  
-        border: 2px solid #7f4600;    
-      }
+  }
+  .foot{
+    width: 100%;
+    height: 20vh;
+    position: absolute;
+    bottom: 0px;
+    .form2{
+      margin-top:20vh;
+      box-shadow: none;      
+      color: #7f4600;     
+      background: #ffffff;    
+      display: inline-block;
+      border-radius : 5%;        
+      font-size : 15pt;       
+      text-align : center;      
+      cursor : pointer;    
+      padding: 12px 12px;   
+      background : #7f4600;    
+      color: #ffffff;    
+      line-height: 1em;     
+      transition: .3s;        
+      box-shadow : 2px 2px 19px #666666;  
+      border: 2px solid #7f4600;    
     }
   }
 }
+
 // ---------------------------------------------------------
 
 // ユーザープロフィール-----------------------------------------
@@ -300,14 +282,14 @@ body{
           border-radius:70%;
           margin-left: 5vw;
           margin-top: 10vh;
-          border: 4px solid white;
+          border: 4px solid #DEB887;
         }
           .user-profile{
             width:63vw;
             height: 38vh;
             margin-right:7vw ;
             margin-top: 7vh;
-            border: 2px solid white;
+            border: 2px solid #DEB887;
             float: right;
           }
       }           
@@ -322,7 +304,7 @@ body{
 .wrap{
   width: 100vw;
   height: 50vh;
-  background-color: #EEEEEE;
+  background-color: #ffffff;
   .wrap-line{
     top: 0;
     width: 100vw;
@@ -342,3 +324,66 @@ body{
     }
   }
 }
+
+// show-------------------------------------------
+  .wrapper-down{
+    height: calc(100%-119.34px);
+    padding: 0 10vw;
+    background-color: #EEEEEE;
+    .content-image{
+      height: 100%;
+      background-color:#ffffff;
+      overflow: scroll;
+      .wrapper-image{
+        height: 30vh;
+        width: 50vw;
+        .image5{
+          margin: 5vh 26vh;
+          height: 50vh;
+          width: 50vw;
+          border: 3px solid #DEB887;
+        }
+      }
+      .wrapper-content{
+        height: 30%;
+        margin-top:30vh;
+        padding: 0vh 5vw 5vh 5vw;
+        .top-title{
+          height: 5vh;
+          text-align: center;
+          font-size: 2vw;
+          color: #333;
+        }
+      }
+      .comment-wrap{
+        height: 20vh;
+        // background-color: #333;
+        .comments{
+          width: 10vw;
+          height: 10vh;
+          margin: 0 auto;
+          textarea{
+            border: 3px solid #453523;
+          }
+          input{
+            border: 2px solid #DEB887;
+          }
+        }
+        .comment-part{
+          height: 20%;
+          text-align: center;
+          a{
+          }
+          strong{
+            font-size: 1.5vh;
+          }
+        }
+      }
+      .button-12{
+        height: 5vh;
+        margin: 0 auto;
+      }
+    }
+  }
+
+// ----------------------------------------------------------
