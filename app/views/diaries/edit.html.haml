@@ -3,8 +3,6 @@
   .new-wrapper
     .contents
       %p 編集
-      .text
-        = f.text_field :title, placeholder: :タイトル, class: :title
       .date
         = f.date_field :goal, placeholder: :目標の日にち, class: :date
       .image-space
@@ -12,4 +10,4 @@
       .posts
         = f.text_area :content, placeholder: :本文記述欄, class: :content
       .foot
-        = f.submit '投稿する', class: 'form'
+        = f.submit '投稿する', class: 'form2'
