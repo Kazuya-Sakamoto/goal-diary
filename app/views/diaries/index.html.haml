@@ -9,7 +9,7 @@
     -#   = link_to new_group_path do
   .diaries
     = render @diaries
-    
+    = paginate(@diaries)
   .footer
     .footer-last
       %p

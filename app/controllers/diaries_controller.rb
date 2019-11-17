@@ -1,8 +1,18 @@
 class DiariesController < ApplicationController
   def index
-    @diaries = Diary.includes(:user)
+    @diaries = Diary.includes(:user).page(params[:page]).per(12).order("created_at DESC") #順番大事 page→per→order
   end
   
+  def new
+    @diary = Diary.new
+  end
+
+  def show
+    @diary = Diary.find(params[:id])
+    @comment = Comment.new
+    @comments = @diary.comments.includes(:user)
+  end
+
   def edit
     @diary = Diary.find(params[:id])
   end
@@ -11,10 +21,6 @@ class DiariesController < ApplicationController
     diary = Diary.find(params[:id])
     diary.update(diary_params)
     redirect_to diary_path(diary.id)
-  end
-
-  def new
-    @diary = Diary.new
   end
 
   def create
@@ -26,12 +32,6 @@ class DiariesController < ApplicationController
     diary = Diary.find(params[:id])
     diary.destroy
     redirect_to root_path
-  end
-
-  def show
-    @diary = Diary.find(params[:id])
-    @comment = Comment.new
-    @comments = @diary.comments.includes(:user)
   end
 
   private
