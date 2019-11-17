@@ -48,5 +48,28 @@
 - belong_to :diary
 - belongs_to :comment
 
+# 使用技術
+- Ruby
+- Rails
+- Haml
+- SCSS
+- JavaScript
+- AWS
+
+# Function
+- ログイン
+- ログアウト
+- 新規機登録
+- 新規投稿
+- 投稿編集
+- 投稿削除
+- プロフィール
+- プロフィール編集
+- いいね
+- 逆算
+- カレンダー
+- pagination
+- コメント機能
+- Readmore
 
 
