@@ -11,6 +11,8 @@
           = @diary.date.ceil(0)
           日
         = @diary.content
+      .time
+        = @diary.created_at.to_s(:datetime_jp)
       .comment-wrap
         .iine 
           - if user_signed_in?
@@ -28,7 +30,7 @@
             - @comments.each do |c|
             %p
               %strong
-                = link_to c.user.nickname
+                = link_to c.user.nickname, user_path
                   = c.text
       .button-12
         = link_to "編集", edit_diary_path(@diary.id), class:"edit"
