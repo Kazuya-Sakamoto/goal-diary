@@ -12,6 +12,11 @@
           日
         = @diary.content
       .comment-wrap
+        .iine 
+          - if user_signed_in?
+            = form_with model: [@diary, @like], local: true do |iine|
+              = iine.submit :❤️, placeholder: :❤️
+              = @diary.likes.count
         .comments
           - if user_signed_in?
             = form_with model: [@diary, @comment], local: true do |f|
@@ -28,4 +33,3 @@
       .button-12
         = link_to "編集", edit_diary_path(@diary.id), class:"edit"
         = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
-      

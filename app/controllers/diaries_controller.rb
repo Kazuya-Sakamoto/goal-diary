@@ -10,7 +10,9 @@ class DiariesController < ApplicationController
   def show
     @diary = Diary.find(params[:id])
     @comment = Comment.new
+    @like = Like.new
     @comments = @diary.comments.includes(:user)
+    @likes = @diary.likes.includes(:user)
   end
 
   def edit

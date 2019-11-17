@@ -293,6 +293,19 @@ body{
       .comment-wrap{
         height: 20vh;
         // background-color: #333;
+        .iine{
+          width: 10vw;
+          height: 10vh;
+          form{
+            width: 5vw;
+            height: 7vh;
+            text-align: center;
+            margin-left: 1vw;
+            input{
+              width: 10vw;
+            }
+          }
+        }
         .comments{
           width: 40vw;
           height: 10vh;

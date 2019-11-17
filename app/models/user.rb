@@ -9,5 +9,5 @@ class User < ApplicationRecord
         has_many :diaries
         has_many :goals
         has_many :comments
-        has_many :likes, dependent: :destroy
+        has_many :likes
 end
