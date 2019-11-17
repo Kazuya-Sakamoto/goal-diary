@@ -6,43 +6,47 @@
 |email|string||null: false|
 |password|string|null: false|
 |profile|string|
-|icon|string|
+|image|string|
 ### Asociation
-- has_many diarys
-- belong_to space
+- has_many :diarys
+- has_many :comments
+- has_many :likes
 
 ## diarys テーブル
 |Column|Type|Options|
 |------|----|-------|
-|title|string|null: false|
-|content|string|
+|goal|daterime|null: false|
+|content|string|null: false|
 |image|string|
 |user_id|refrences|null: false, foregin_key :true|
+|created_at|date|
 ### Asociation
-- belong_to: user
-- belong_to: space
+- belongs_to: user
+- has_many: comments
+- has_many: likes
 
-## space テーブル
-|Column|Type|Options|
-|------|----|-------|
-|title|string
-|content|string|
-|image|string|
-|user_id|refrences|null: false, foregin_key :true|
-|diary|id|refrences|null: false, foregin_key :true|
-### Asociation
-- has_many :users
-- has_many :diarys
-
-
-<!-- ## diary_userテーブル
+## comments テーブル
 |Column|Type|Options|
 |------|----|-------|
 |user_id|refrences|null: false, foregin_key :true|
-|diary|id|refrences|null:false, foregin_key :true|
+|goal_id|refrences|null: false, foregin_key :true|
+|created_at|date|
+|text|string||null: false|
 ### Asociation
-- belong_to :user
+- belongs_to :user
 - belong_to :diary
- -->
+- has_many :likes
+
+## likes テーブル
+|Column|Type|Options|
+|------|----|-------|
+|user_id|refrences|null: false, foregin_key :true|
+|goal_id|refrences|null: false, foregin_key :true|
+|created_at|date|
+### Asociation
+- belongs_to :user
+- belong_to :diary
+- belongs_to :comment
+
 
 
