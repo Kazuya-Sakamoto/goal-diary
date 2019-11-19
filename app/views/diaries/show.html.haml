@@ -16,6 +16,7 @@
       .comment-wrap
         .iine 
           - if user_signed_in?
+            -# = link to @diary.likes.count, diary_likes_path
             = form_with model: [@diary, @like], local: true do |iine|
               = iine.submit :❤️, placeholder: :❤️
               = @diary.likes.count

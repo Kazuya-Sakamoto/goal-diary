@@ -3,12 +3,16 @@ class LikesController < ApplicationController
 
     def create
       Like.create(like_params)
-      redirect_to root_path
+      respond_to do |format|
+        format.html { redirect_to root_path, notice: 'いいねしました'}
+        format.json
+        # binding.pry
+      end
     end
 
     def destory
-      # Like.destory(like_params)
-      # redirect_to root_path
+  
+      redirect_to root_path
     end
 
     private

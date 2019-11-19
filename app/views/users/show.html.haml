@@ -5,6 +5,9 @@
       .user-image
         = image_tag @user.image.url, class: 'img-profile' if @user.image.present?
         .user-profile
+          = @user.introduction
+          .user-add
+            = link_to "自己紹介の追加", edit_user_path(@user), class: :profi
 .wrapper
   .diaries
     = render @diaries

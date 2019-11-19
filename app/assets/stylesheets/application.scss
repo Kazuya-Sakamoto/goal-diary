@@ -5,23 +5,54 @@ body{
 }
 // 部分テンプレート  header-----------------------------------
 .top-header{
-  height: 15vh;
+  height: 18vh;
   width: 100vw;
   border-bottom: 1px solid #e6e6e6;
   .header-line{
+    box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
     background-color: #EEEEEE;
-    height: 7vh;
+    height: 10vh;
     border-bottom: 1px solid #453523;
     .header-right{
       width: 30%;
       height: 100%;
       float:right;
+      .user-prf{
+        width:15vw;
+        height: 10vh;
+        float: right;
+        margin-right: 8vw;
+        .user-image{
+          width: 4vw;
+          height: 8vh;
+          margin-top:1vh;
+          border-radius:50%;
+          float: right;
+        }
+        .name{
+          width: 7vw;
+          height: 60%;
+          margin-top: 3.5vh;
+          margin-left: 3vw;
+          .user-name{
+            color: black;
+            font-size: 2vh;
+            float: right;
+          }
+        }
+      }
     }
     .header-left{
       width: 30%;
       height: 100%;
       float: left;
       margin-top: 0;
+      .log-out{
+        color: #DEB887;
+      }
+      .log-in{
+        color: #DEB887;
+      }
     }
   }
   .activemessage{
@@ -52,7 +83,9 @@ body{
   
       a {
         display: block;
-        margin: 1vh 6vw;
+
+        // padding: .4em .8em;
+        margin: 1vh 11vw;
         text-decoration: none;
         color: #333;
         background: #fff;
@@ -88,18 +121,19 @@ body{
   // 部分テンプレートーーーーーーーーーーーーーーーーーーーーーーーーーーー
   .diaries{
     height: 95%;
-    width: 82vw;
+    width: 85vw;
     overflow: scroll;
     margin: 0 auto;
     background-color:#FFFFFF;
     .paginate{
       color: black;
+      width: 80%;
     }
     .diary{
         display: inline-block;
         width: 30%;
       .card-list{
-        padding: 5vh 4vw 5vh 5vw;
+        padding: 4vh 4vw 4vh 3vw;
         width: 100%;
         color:white;
         .card-item{
@@ -133,9 +167,15 @@ body{
           .card-content{
             color: #453523;
             display: inline;
+            a{
+              color: #453523;
+            }
             .content-name{
               float: right;
               color: #DEB887;
+              .name{
+                color: #DEB887;
+              }
             }
           }
         }
@@ -146,7 +186,7 @@ body{
   .footer{
     height: 5vh;
     width: 100%;
-    background-color:#453523;
+    background-color:#ffffff;
     bottom: 0;
     display: flex;
     position: absolute;
@@ -244,12 +284,21 @@ body{
           border: 4px solid #EEEEEE;
         }
           .user-profile{
-            width:60vw;
-            height: 22vh;
-            margin-right:10vw ;
-            margin-top: 5vh;
+            width:50vw;
+            height: 18vh;
+            margin-right:18vw ;
+            margin-top: 7vh;
             border: 2px solid #EEEEEE;
             float: right;
+            .user-add{
+              width: 11vw;
+              height: 15%;
+              margin-top: 12vh;
+              float: right;
+              .profi{
+                color: #7f4600;
+              }
+            }
           }
       }           
     }
@@ -338,3 +387,26 @@ body{
   }
 
 // ----------------------------------------------------------
+
+// 自己紹介作成------------------------------------------------
+.wr{
+  width:100vw;
+  height:80vh;
+  .wr1{
+    width: 60%;
+    margin: 0 auto;
+    .intro{
+      margin-top: 5vh;
+      height: 40vh;
+      width: 100%;
+    }
+    .send{
+      margin-top: 2vh;
+      width: 10vw;
+      height: 6vh;
+      background-color: #7f4600;
+      box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+      border-radius: 10%;
+    }
+  }
+}

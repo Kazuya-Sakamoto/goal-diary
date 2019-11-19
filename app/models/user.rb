@@ -4,10 +4,11 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
         :recoverable, :rememberable, :validatable
         
-        mount_uploader :image, ImagesUploader
+  mount_uploader :image, ImagesUploader
         
-        has_many :diaries
-        has_many :goals
-        has_many :comments
-        has_many :likes
+  has_many :diaries
+  has_many :goals
+  has_many :comments
+  has_many :likes
+  # validates :introduction, length: { in: 1.1000}
 end
