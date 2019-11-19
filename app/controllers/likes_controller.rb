@@ -12,6 +12,7 @@ class LikesController < ApplicationController
 
     def destory
   
+      redirect_to root_path
     end
 
     private
