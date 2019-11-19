@@ -12,5 +12,19 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require turbolinks
 //= require_tree .
+//= require jquery
+
+
+$(function(){
+  $('likes').on('submit', function(e){
+    e.preventDefault();
+    $.ajax({
+      url: `root`,
+      type: "POST",
+      dateType: 'json',
+      processData: false,
+      contentType: false
+    })
+  });
+});

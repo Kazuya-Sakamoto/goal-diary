@@ -1,0 +1,6 @@
+= render partial: "header"
+.wr
+  .wr1
+    = form_with model: @user, local: true do |f|
+      = f.text_area :introduction, placeholder: :自己紹介100文字以内, class: :intro
+      = f.submit 'send', class: :send

@@ -5,7 +5,7 @@ class Diary < ApplicationRecord
     belongs_to :user
     has_many :comments
     has_many :likes
-    validates :content, length: { in: 1..1000 }
+    validates :content, length: { in: 1..100 }
 
 # self をメソッドに付与する事で、インスタンスメソッドではなく、クラスメソッドとして定義す
     def date
