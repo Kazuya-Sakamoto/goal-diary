@@ -1,17 +1,50 @@
-= render partial: "header"
 .wrapper
-  .header
-    .header_left
-      .header_left_home
-        -# = link_to "新規投稿", new_diary_path(@diary)
-    .header_right
-      .header_right_log
-    -#   = link_to new_group_path do
-  .diaries
-    = render @diaries
-    = paginate(@diaries)
+  = render partial: "header"
+  .main
+    .main-middle
+      = render @diaries
+      = paginate(@diaries)
   .footer
-    .footer-last
-      %p
-        kazuuright © design-kazuu. All kazya reserved.
-      
+    .footer-bottom
+      .footer-bottom__middle
+        .footer-bottom__middle__about
+          %h1.footer-bottom__middle__about__goaldiary
+            Goal-diaryについて
+            %ul.footer-bottom__middle__about__goaldiary__description
+              〜説明〜
+              %li.footer-bottom__middle__about__goaldiary__description__consept
+                コンセプト
+              %li.footer-bottom__middle__about__goaldiary__description__sakamoto
+                製作者から
+              %li.footer-bottom__middle__about__goaldiary__description__use
+                使用上の注意
+        .footer-bottom__middle__help
+          %h2.footer-bottom__middle__help__link
+            Link
+            %ul.footer-bottom__middle__help__link__description
+              sakamoto
+              %li.footer-bottom__middle__help__link__description__twitter
+                = link_to 'twitter', 'https://twitter.com/sakamotokazuyat', class: 'twitter'
+              %li.footer-bottom__middle__help__link__description__note
+                note
+              %li.footer-bottom__middle__help__link__description__detail
+                detail
+        .footer-bottom__middle__howto
+          %h2.footer-bottom__middle__howto__procedure
+            How to
+            %ul.footer-bottom__middle__howto__procedure__description
+              使用方法
+              %li.footer-bottom__middle__howto__procedure__description__start
+                はじめに
+              %li.footer-bottom__middle__howto__procedure__description__short
+                短期目標
+              %li.footer-bottom__middle__howto__procedure__description__long
+                長期目標
+      .footer-bottom__under
+        .footer-bottom__under__logo
+          = image_tag 'image10.png', class: 'goaldiary'
+        .footer-bottom__under__copy
+  .foot
+    .foot-btn
+      .foot-btn__name
+        = link_to "投稿", new_diary_path(@diary), class: 'toukou'

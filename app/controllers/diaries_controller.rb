@@ -1,15 +1,27 @@
 class DiariesController < ApplicationController
   before_action :set_find_diary, only: %i[show edit update destroy]
+  # before_action :move_to_registration, except: [:index, :show]
 
   def index
-    @diaries = Diary.includes(:user).page(params[:page]).per(12).order("created_at DESC") #順番大事 page→per→order
+    @diaries = Diary.includes(:user).page(params[:page]).per(20).order("created_at DESC") #順番大事 page→per→order
+    # @diary = Diary.all
   end
   
   def new
     @diary = Diary.new
+    if !user_signed_in?
+      redirect_to new_user_registration_path, notice: '投稿には登録が必要です!'
+      # flash.now[:alert] = '登録をしてください'
+    end
+  end
+
+  def create
+    Diary.create(diary_params)
+    redirect_to root_path
   end
 
   def show
+    # @user = User.find(params[:id])
     @comment = Comment.new
     @comments = @diary.comments.includes(:user)
     @like = Like.new
@@ -22,11 +34,6 @@ class DiariesController < ApplicationController
   def update
     @diary.update(diary_params)
     redirect_to diary_path
-  end
-
-  def create
-    Diary.create(diary_params)
-    redirect_to root_path
   end
   
   def destroy
@@ -42,4 +49,8 @@ class DiariesController < ApplicationController
   def set_find_diary
     @diary = Diary.find(params[:id])
   end
+
+  # def move_to_registration
+  #   redirect_to new_user_registration_path unless user_signed_in?
+  # end
 end

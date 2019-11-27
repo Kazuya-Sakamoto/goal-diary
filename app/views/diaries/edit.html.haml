@@ -1,12 +1,36 @@
-= form_with model: @diary, local: true do |f|
-  = render partial: "header"  
-  .contents
-    %p 編集
-    .date
-      = f.date_field :goal, placeholder: :目標の日にち, class: :date
-    .image-space
-      = f.file_field :image, placeholder: :画像投稿, class: :button
-    .posts
-      = f.text_area :content, placeholder: :文字数指定100文字, class: :content
-    .foot
-      = f.submit '投稿する', class: 'form2'
+.contents
+  .contents__top
+    .contents__top__middle
+      = link_to root_path, class: 'link' do
+        = image_tag 'image8.png', class: 'goaldiary'
+  .contents__bottom
+    .contents__bottom__middle
+      %p.contents__bottom__middle__header
+        日記作成
+      = form_with model: @diary, local: true do |f|
+        .contents__bottom__middle__middle
+          目標の日にち設定
+          = f.date_field :goal, placeholder: :目標の日にち, class: 'date'
+        .contents__bottom__middle__content
+          画像の投稿
+          = f.file_field :image, placeholder: :画像投稿, class: 'image'
+        .contents__bottom__middle__text
+          日記
+          = f.text_area :content, placeholder: :１００文字以内, class: :content
+        .contents__bottom__middle__bottom
+          .contents__bottom__middle__bottom__btn
+            投稿
+            = f.submit '投稿', class: 'form2'
+
+-# = form_with model: @diary, local: true do |f|
+-#   = render partial: "header"  
+-#   .contents
+-#     %p 編集
+-#     .date
+-#       = f.date_field :goal, placeholder: :目標の日にち, class: :date
+-#     .image-space
+-#       = f.file_field :image, placeholder: :画像投稿, class: :button
+-#     .posts
+-#       = f.text_area :content, placeholder: :文字数指定100文字, class: :content
+-#     .foot
+-#       = f.submit '投稿する', class: 'form2'
