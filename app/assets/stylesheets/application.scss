@@ -1,180 +1,171 @@
 @import "./reset";
-// indexーーーーーーーーーーーーーーーーーーーーーーーーー
-body{
-  font-family: 'arial unicode ms';
+@import "./diaries";
+@import "./users";
+html{
+  width: 100%;
+  height: 100%;
+  body{
+    font-family: 'arial unicode ms';
+  }
 }
-// 部分テンプレート  header-----------------------------------
-.top-header{
-  height: 18vh;
-  width: 100vw;
-  border-bottom: 1px solid #e6e6e6;
-  .header-line{
-    box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
-    background-color: #EEEEEE;
-    height: 10vh;
-    border-bottom: 1px solid #453523;
-    .header-right{
-      width: 30%;
-      height: 100%;
-      float:right;
-      .user-prf{
-        width:15vw;
-        height: 10vh;
-        float: right;
-        margin-right: 8vw;
-        .user-image{
-          width: 4vw;
-          height: 8vh;
-          margin-top:1vh;
-          border-radius:50%;
-          float: right;
-        }
-        .name{
-          width: 7vw;
-          height: 60%;
-          margin-top: 3.5vh;
-          margin-left: 3vw;
-          .user-name{
-            color: black;
-            font-size: 2vh;
-            float: right;
-          }
-        }
-      }
-    }
-    .header-left{
-      width: 30%;
-      height: 100%;
-      float: left;
-      margin-top: 0;
-      .log-out{
-        color: #DEB887;
-      }
-      .log-in{
-        color: #DEB887;
-      }
-    }
-  }
-  .activemessage{
-    height: 0.8vh;
-    margin: 0 auto;
-    background-color: #453523;
-    border-bottom: 3px solid #ae8c5f;
-  }
-  .my-parts ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: inline;
-  
-    &::after {
-      content: "";
-      clear: both;
-    }
-  
-    li {
-      float: left;
-      .user-name{
-        color: #DEB887;
-      }
-      &:first-child {
-        border-left: none;
-      }
-  
-      a {
-        display: block;
 
-        // padding: .4em .8em;
-        margin: 1vh 11vw;
-        text-decoration: none;
-        color: #333;
-        background: #fff;
-        text-align: center;
-        width: 95%;
-        .toukou{
-          font-size: 1vh;
-          color: #453523;
-          float:right;
-        }
-        &:hover {
-          background: #eee;
+.wrapper{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  box-sizing: border-box;
+  .header{
+    width: 100%;
+    height: 14vh;
+    // position: absolute;
+    position: relative;
+    z-index: 3;
+    box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
+    background-color: rgb(255, 255, 255);
+    // background-color: rgb(34, 34, 34);
+    // position: fixed;
+    // box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
+    .header-middle{
+      width: 80%;
+      height: 80%;
+      margin: 0 auto;
+      // background-color: red;
+      &__top{
+        // background-color: red;
+        width: 100%;
+        padding:10px 0 0 0;
+        height: 5vh;
+        &__icon{ 
+          width: 160px;
+          height: 50px;
+          // background-color: #333;
+          .link{
+            .goaldiary{
+              width: 100%;
+              height: 100%;
+            }
+            .goaldiary:hover{
+              opacity: 0.6;
+            }
+          }
         }
       }
-    }
-  }
-} 
-  // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-.wrapper{
-  background-color: #EEEEEE;
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  position: relative;
-  .header{
-    &__left{
-        float: left;
-        width: 20vw;
-        height: 10vh;
-        background-color: #FFFFFF;
-    }
-  }
-  // 部分テンプレートーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  .diaries{
-    height: 95%;
-    width: 85vw;
-    overflow: scroll;
-    margin: 0 auto;
-    background-color:#FFFFFF;
-    .paginate{
-      color: black;
-      width: 80%;
-    }
-    .diary{
-        display: inline-block;
-        width: 30%;
-      .card-list{
-        padding: 4vh 4vw 4vh 3vw;
+      &__bottom{
+        margin: 13px 0 0;
+        height: 40%;
         width: 100%;
-        color:white;
-        .card-item{
-          display: inline-block;
-          width: 92%;
-          .card-img{
-            position: relative;
-            box-shadow: 0 0 5px #cccccc;
-            cursor: pointer;
-            .img{
-              width: 100%;
-              height: 25vh;
-              border-radius: 5%;
-              -webkit-transition: all 1s ease;
-              transition: all 1s ease;
-              -webkit-filter: blur(0px);
-              filter: blur(0px);
-            }
-            .img:hover{
-              -webkit-filter: blur(4px);
-              filter: blur(4px);
+        display: flex;
+        // background-color: aqua;
+        &__left{
+          width: 25vw;
+          height: 100%;
+          // background-color: aquamarine;
+          box-sizing: border-box;
+          display: flex;
+          &__login{
+            // display: block;
+            font-weight: 600;
+            // line-height: 36px;
+            white-space: nowrap;
+            margin: 0 10px;
+            background-color: rgb(234, 53, 45);
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 12px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(234, 53, 45);
+            border-image: initial;
+            border-radius: 4px;
+            padding: 8px 10px;
+            .log-in{
+              color: #FFFFFF;
+              text-decoration: none;
             }
           }
-          .card-title{
-            color: #453523;
-            font-size: 20px;
-            text-align: center;
-            height: 3vh;
-            font-weight:bold;
+          &__login:hover{
+            opacity: 0.6;
           }
-          .card-content{
-            color: #453523;
-            display: inline;
-            a{
-              color: #453523;
+          &__logout{
+            // display: block;
+            font-weight: 600;
+            white-space: nowrap;
+            margin: 0 10px;
+            background-color: blue;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 12px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: blue;
+            border-image: initial;
+            border-radius: 4px;
+            padding: 8px 10px;
+            .log-out{
+              color: #FFFFFF;
+              text-decoration: none;
             }
-            .content-name{
-              float: right;
-              color: #DEB887;
-              .name{
-                color: #DEB887;
+          }
+          &__logout:hover{
+            opacity:0.6;
+          }
+          &__sigiup{
+            // display: block;
+            font-size: 14px;
+            font-weight: 600;
+            white-space: nowrap;
+            // line-height: 36px;
+            margin: 0 10px;
+            background-color: navy;
+            color: rgb(255, 255, 255);
+            display: block;
+            font-size: 14px;
+            border-width: 1px;
+            border-style: solid;
+            border-color: navy;
+            border-image: initial;
+            border-radius: 4px;
+            padding: 8px 10px;
+            .create{
+              color: rgb(255, 255, 255);
+              text-decoration: none;
+            }
+          }
+        }
+        &__right{
+          width: 25vw;
+          // box-sizing: border-box;
+          margin-left: 35%;
+          // display: flex;
+          &__image{
+            width: 50%;
+            height: 100%;
+            // background-color: #333;
+            margin-left: 70%;
+            display: flex;
+            .user-image{
+              width: 3vw;
+              height: 5.7vh;
+              border-radius: 30px;
+              cursor: pointer;
+            }
+            .user-image:hover{
+              opacity: 0.6;
+            }
+            &__name{
+              width:40%;
+              height: 100%;
+              margin-left: 5px;
+              padding: 10px;
+              // background-color: #333;
+              .user-name{ 
+                font-size: 16px;
+                text-decoration: none;
+                color:  rgba(3, 118, 250, 0.562);
+                cursor: pointer;
+              }
+              .user-name:hover{
+                opacity: 0.5;
               }
             }
           }
@@ -182,231 +173,744 @@ body{
       }
     }
   }
-  // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-  .footer{
-    height: 5vh;
+  .header-nav{
     width: 100%;
-    background-color:#ffffff;
-    bottom: 0;
-    display: flex;
-    position: absolute;
-    .footer-last{
-      height: 5vh;
-      width: 50%;
-      bottom: 0%;
-      margin: 0 auto;
-      p{
-        margin-top: 2vh;
-        color: #ffffff;
-        margin-left: 15vw;
-        size: 1px;
+    // height: 50%;
+    &__line{
+      // margin: 10px auto;
+      // width: 80%;
+      height: 2vh;
+      border: solid 1px #333;
+      // background-color: navy;
+      border-radius: 10px;
+      // background-color: red;
+      display: block;
+      // padding: .4em .8em;
+      color: #333;
+      text-align: center;
+      padding: 20px 0;
+      display: flex;
+      // width: 95%;
+      &__home{
+        width: 18%;
+        height: 4vh;
+        padding: 0 90px 0 90px;
+      }
+      &__recommended{
+        width: 18%;
+        height: 4vh;
+        padding: 0px 90px 0px 90px;
+      }
+      &__post{
+        width: 18%;
+        height: 4vh;
+        padding: 0px 90px px 90px;
       }
     }
   }
-}
-// -------------------------------------------------------
-
-// 新規投稿ページ-----------------------------------------
-.contents{
-  width: 80%;
-  height: 80%;
-  margin: 0 auto;
-  margin-top: 30px;
-  background-color: #ffffff;
-  padding: 0;
-  text-align: center;
-  font-size: 40px;
-  position: relative;
-  p{
-    font-size: 30px;
-    margin-top: 0;
-    color: #453523;
-    font-weight: bolder;
-  }
-  .image-space{
-    .button{
-      width: 10vw;
-      height: 6vh;
+  .main{
+    // background-color: rgb(34, 34, 34);
+    width: 100%;
+    .main-middle{
+      width: 85%;
+      height: 100%;
+      margin: 10px auto;
+      // background-color: red;
+      &__diary{
+        display: inline-block;
+        width: 21%;
+        // border: solid 1px #333;
+        height: 27vh;
+        margin: 3vw 1vw 2vw 2vw;
+        position: relative;
+        box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
+        // z-index: 1;
+        // color: #FFFFFF;
+        &__top{
+          width: 100%;
+          height: 70%;
+          &__image{
+            width: 100%;
+            height: 100%;
+            .img{
+              width: 100%;
+              height: 100%;
+            }
+            .img:hover{
+              opacity: 0.6;
+            }
+            // background-color: #333;
+            &__name{
+              font-size: 12px;
+              width: 10%;
+              height: 30px;
+              letter-spacing: .02em;
+              margin: 0;
+              padding: 0 12px;
+              background: rgba(212, 15, 15, 0.4);
+              border-radius: 0 14px 14px 0;
+              z-index: 1;
+              color: white;
+              .name{
+                color: white;
+                font-size: 12px;
+                text-decoration: none;
+              }
+              .name:hover{
+                opacity:0.3 ;
+              }
+            }
+          }
+        }
+        &__bottom{
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          height: 30%;
+          &__goal{
+            font-size: 10px;
+            text-align: center;
+          }
+        }
+      }
     }
   }
-  .posts{
-    width: 80vw;
+  .footer{
+    // position: fixed;
     height: 40vh;
-    .content{
-      width: 80%;
-      height: 80%;
-      margin: 20px 0px 0px 0px;
-      border: solid 3px #EEEEEE;
-      font-size: 20px;
+    width: 100vw;
+    // position: absolute;
+    // bottom: 0;
+    // position: fixed;
+    // .footer-top{
+    //   background-image: url("star.png");
+    //   // background-color: rgb(34, 34, 34);
+    //   color: rgb(255, 255, 255);
+    //   font-size: 12px;
+    //   padding: 0px 20px 10px;
+    //   height: 30vh;
+    // }
+    .footer-bottom{
+      background-color: rgb(34, 34, 34);
+      color: rgb(255, 255, 255);
+      font-size: 12px;
+      padding: 0px 20px 10px;
+      height: 40vh;
+      &__middle{
+        width: 80%;
+        height: 60%;
+        margin: 0 auto;
+        // background-color: white;
+        &__about{
+          padding: 0px 40px 0px 0px;
+          display: inline-block;
+          margin-top: 18px;
+          vertical-align: top;
+          height: 90%;
+          width: 200px;
+          &__goaldiary{
+            font-size: 18px;
+            font-family: Arial;
+            &__description{
+              opacity: 0.7;
+              margin:16px 0 0;
+              font-size: 15px;
+              &__consept{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__consept:hover{
+                text-decoration: underline;
+
+              }
+              &__sakamoto{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__sakamoto:hover{
+                text-decoration: underline;
+              }
+              &__use{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__use:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        &__help{
+          padding: 0px 40px 0px 0px;
+          display: inline-block;
+          margin-top: 18px;
+          vertical-align: top;
+          height: 90%;
+          width: 200px;
+          &__link{
+            margin: 10px 0 0 0;
+            font-size: 18px;
+            font-family: Arial;
+            &__description{
+              opacity: 0.7;
+              margin:16px 0 0;
+              font-size: 15px;
+              &__twitter{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              .twitter{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                color: rgb(255, 255, 255);
+                cursor: pointer;
+              }
+              // .twitter:hover{
+              //   text-decoration: underline;
+              // }
+              &__note{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__note:hover{
+                text-decoration: underline;
+              }
+              &__detail{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__detail:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+        &__howto{
+          padding: 0px 40px 0px 0px;
+          display: inline-block;
+          margin-top: 18px;
+          vertical-align: top;
+          height: 90%;
+          width: 200px;
+          &__procedure{
+            margin: 5px 0 0 0;
+            font-size: 18px;
+            font-family: Arial;
+            &__description{
+              opacity: 0.7;
+              margin:16px 0 0;
+              font-size: 15px;
+              &__start{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__start:hover{
+                text-decoration: underline;
+              }
+              &__short{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__short:hover{
+                text-decoration: underline;
+              }
+              &__long{
+                opacity: 0.7;
+                margin:18px 0 0;
+                font-size: 12px;
+                cursor: pointer;
+              }
+              &__long:hover{
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+      &__under{
+        margin: 30px;
+        width: 50%;
+        height: 10vh;
+        &__logo{
+          padding: 20px 20px 20px 100px;
+          // background-color: #FFFFFF;
+          width: 50%;
+          height: 7vh;
+          .goaldiary{
+            width: 120px;
+            height: 60px;
+          }
+        }
+      }
     }
   }
   .foot{
-    width: 100%;
-    height: 20vh;
-    position: absolute;
-    bottom: 0px;
-    .form2{
-      margin-top:20vh;
-      box-shadow: none;      
-      color: #7f4600;     
-      background: #EEEEEE;    
-      display: inline-block;
-      border-radius : 5%;        
-      font-size : 15pt;       
-      text-align : center;      
-      cursor : pointer;    
-      padding: 12px 12px;   
-      background : #7f4600;    
-      color: #ffffff;    
-      line-height: 1em;     
-      transition: .3s;        
-      box-shadow : 2px 2px 19px #666666;  
-      border: 2px solid #7f4600;    
+    bottom: 32px;
+    font-size: 22px;
+    height: 160px;
+    right: 32px;
+    width: 160px;
+    position: fixed;
+    z-index: 2;
+    // background-color: #333;
+    .foot-btn{
+      width: 150px;
+      height: 120px;
+      padding-top: 32px;
+      background-color: rgba(35, 119, 214, 0.562);
+      border-radius: 50%;
+      color: white;
+      text-align: center;
+      &__name{
+        margin: 25px 0 0 0 ;
+        .toukou{
+          color: #FFFFFF;
+          text-decoration: none;
+        }
+      }
+    }
+    .foot-btn:hover{
+      opacity: 0.7;
     }
   }
 }
-// ---------------------------------------------------------
 
-// ユーザープロフィール-----------------------------------------
-.wrap{
-  height: 35vh;
-  .user-main{
-    .user-top{
-      .user-image{
-        width: 100vw;
-        height: 100%;
-        .img-profile{
-          width: 16vw;
-          height: 27vh;
-          border-radius:70%;
-          margin-left: 10vw;
-          margin-top: 2vh;
-          border: 4px solid #EEEEEE;
-        }
-          .user-profile{
-            width:50vw;
-            height: 18vh;
-            margin-right:18vw ;
-            margin-top: 7vh;
-            border: 2px solid #EEEEEE;
-            float: right;
-            .user-add{
-              width: 11vw;
-              height: 15%;
-              margin-top: 12vh;
-              float: right;
-              .profi{
-                color: #7f4600;
-              }
-            }
-          }
-      }           
-    }
-  }
+
+// alert-------------------------------------------
+.alert {
+  color: white;
+  text-align: center;  
+  background-color:  rgb(234, 53, 45);
+  height: 3vh;
 }
-// ------------------------------------------------------------
-// show---------------------------------------------------------
-  .wrapper-down{
-    height: calc(100%-119.34px);
-    padding: 0 10vw;
-    background-color: #EEEEEE;
-    .content-image{
-      height: 100%;
-      background-color:#ffffff;
-      overflow: scroll;
-      .wrapper-image{
-        height: 30vh;
-        width: 50vw;
-        .image5{
-          margin: 5vh 26vh;
-          height: 50vh;
-          width: 50vw;
-          border: 3px solid #DEB887;
-        }
-      }
-      .wrapper-content{
-        height: 30%;
-        margin-top:30vh;
-        padding: 0vh 5vw 5vh 5vw;
-        .top-title{
-          height: 5vh;
-          text-align: center;
-          font-size: 2vw;
-          color: #333;
-        }
-      }
-      .time{
-        color: grey;
-        margin-left: 1vw;
-      }
-      .comment-wrap{
-        height: 20vh;
-        .iine{
-          color: red;
-          width: 10vw;
-          height: 10vh;
-          form{
-            width: 5vw;
-            height: 7vh;
-            text-align: center;
-            margin-left: 1vw;
-            input{
-              width: 10vw;
-            }
-          }
-        }
-        .comments{
-          width: 40vw;
-          height: 10vh;
-          margin: 0 auto;
-          text-align: center;
-          textarea{
-            text-align: center;
-            width: 40vw;
-            border: 3px solid #EEEEEE;
-          }
-          input{
-            border: 2px solid #EEEEEE;
-          }
-        }
-        .comment-part{
-          height: 20%;
-          text-align: center;
-          a{
-          }
-          strong{
-            font-size: 1.5vh;
-          }
-        }
-      }
-      .button-12{
-        height: 5vh;
-        margin: 0 auto;
-      }
-    }
-  }
+// ------------------------------------------------
 
-// ----------------------------------------------------------
+// // indexーーーーーーーーーーーーーーーーーーーーーーーーー
+// body{
+//   font-family: 'arial unicode ms';
+// }
+// // 部分テンプレート  header-----------------------------------
+// .top-header{
+//   height: 18vh;
+//   width: 100vw;
+//   border-bottom: 1px solid #e6e6e6;
+//   .header-line{
+//     box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
+//     background-color: #EEEEEE;
+//     height: 10vh;
+//     border-bottom: 1px solid #453523;
+//     .header-right{
+//       width: 30%;
+//       height: 100%;
+//       float:right;
+//       .user-prf{
+//         width:15vw;
+//         height: 10vh;
+//         float: right;
+//         margin-right: 8vw;
+//         .user-image{
+//           width: 4vw;
+//           height: 8vh;
+//           margin-top:1vh;
+//           border-radius:50%;
+//           float: right;
+//         }
+//         .name{
+//           width: 7vw;
+//           height: 60%;
+//           margin-top: 3.5vh;
+//           margin-left: 3vw;
+//           .user-name{
+//             color: black;
+//             font-size: 2vh;
+//             float: right;
+//           }
+//         }
+//       }
+//     }
+//     .header-left{
+//       width: 30%;
+//       height: 100%;
+//       float: left;
+//       margin-top: 0;
+//       .log-out{
+//         color: #DEB887;
+//       }
+//       .log-in{
+//         color: #DEB887;
+//       }
+//     }
+//   }
+//   .activemessage{
+//     height: 0.8vh;
+//     margin: 0 auto;
+//     background-color: #453523;
+//     border-bottom: 3px solid #ae8c5f;
+//   }
+//   .my-parts ul {
+//     list-style: none;
+//     margin: 0;
+//     padding: 0;
+//     display: inline;
+  
+//     &::after {
+//       content: "";
+//       clear: both;
+//     }
+  
+//     li {
+//       float: left;
+//       .user-name{
+//         color: #DEB887;
+//       }
+//       &:first-child {
+//         border-left: none;
+//       }
+  
+//       a {
+//         display: block;
 
-// 自己紹介作成------------------------------------------------
-.wr{
-  width:100vw;
-  height:80vh;
-  .wr1{
-    width: 60%;
-    margin: 0 auto;
-    .intro{
-      margin-top: 5vh;
-      height: 40vh;
-      width: 100%;
-    }
-    .send{
-      margin-top: 2vh;
-      width: 10vw;
-      height: 6vh;
-      background-color: #7f4600;
-      box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
-      border-radius: 10%;
-    }
-  }
-}
+//         // padding: .4em .8em;
+//         margin: 1vh 11vw;
+//         text-decoration: none;
+//         color: #333;
+//         background: #fff;
+//         text-align: center;
+//         width: 95%;
+//         .toukou{
+//           font-size: 1vh;
+//           color: #453523;
+//           float:right;
+//         }
+//         &:hover {
+//           background: #eee;
+//         }
+//       }
+//     }
+//   }
+// } 
+//   // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+// .wrapper{
+//   background-color: #EEEEEE;
+//   height: 100vh;
+//   width: 100vw;
+//   margin: 0 auto;
+//   position: relative;
+//   .header{
+//     &__left{
+//         float: left;
+//         width: 20vw;
+//         height: 10vh;
+//         background-color: #FFFFFF;
+//     }
+//   }
+//   // 部分テンプレートーーーーーーーーーーーーーーーーーーーーーーーーーーー
+//   .diaries{
+//     height: 95%;
+//     width: 85vw;
+//     overflow: scroll;
+//     margin: 0 auto;
+//     background-color:#FFFFFF;
+//     .paginate{
+//       color: black;
+//       width: 80%;
+//     }
+//     .diary{
+//         display: inline-block;
+//         width: 30%;
+//       .card-list{
+//         padding: 4vh 4vw 4vh 3vw;
+//         width: 100%;
+//         color:white;
+//         .card-item{
+//           display: inline-block;
+//           width: 92%;
+//           .card-img{
+//             position: relative;
+//             box-shadow: 0 0 5px #cccccc;
+//             cursor: pointer;
+//             .img{
+//               width: 100%;
+//               height: 25vh;
+//               border-radius: 5%;
+//               -webkit-transition: all 1s ease;
+//               transition: all 1s ease;
+//               -webkit-filter: blur(0px);
+//               filter: blur(0px);
+//             }
+//             .img:hover{
+//               -webkit-filter: blur(4px);
+//               filter: blur(4px);
+//             }
+//           }
+//           .card-title{
+//             color: #453523;
+//             font-size: 20px;
+//             text-align: center;
+//             height: 3vh;
+//             font-weight:bold;
+//           }
+//           .card-content{
+//             color: #453523;
+//             display: inline;
+//             a{
+//               color: #453523;
+//             }
+//             .content-name{
+//               float: right;
+//               color: #DEB887;
+//               .name{
+//                 color: #DEB887;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
+//   .footer{
+//     height: 5vh;
+//     width: 100%;
+//     background-color:#ffffff;
+//     bottom: 0;
+//     display: flex;
+//     position: absolute;
+//     .footer-last{
+//       height: 5vh;
+//       width: 50%;
+//       bottom: 0%;
+//       margin: 0 auto;
+//       p{
+//         margin-top: 2vh;
+//         color: #ffffff;
+//         margin-left: 15vw;
+//         size: 1px;
+//       }
+//     }
+//   }
+// }
+// // -------------------------------------------------------
+
+// // 新規投稿ページ-----------------------------------------
+// .contents{
+//   width: 80%;
+//   height: 80%;
+//   margin: 0 auto;
+//   margin-top: 30px;
+//   background-color: #ffffff;
+//   padding: 0;
+//   text-align: center;
+//   font-size: 40px;
+//   position: relative;
+//   p{
+//     font-size: 30px;
+//     margin-top: 0;
+//     color: #453523;
+//     font-weight: bolder;
+//   }
+//   .image-space{
+//     .button{
+//       width: 10vw;
+//       height: 6vh;
+//     }
+//   }
+//   .posts{
+//     width: 80vw;
+//     height: 40vh;
+//     .content{
+//       width: 80%;
+//       height: 80%;
+//       margin: 20px 0px 0px 0px;
+//       border: solid 3px #EEEEEE;
+//       font-size: 20px;
+//     }
+//   }
+//   .foot{
+//     width: 100%;
+//     height: 20vh;
+//     position: absolute;
+//     bottom: 0px;
+//     .form2{
+//       margin-top:20vh;
+//       box-shadow: none;      
+//       color: #7f4600;     
+//       background: #EEEEEE;    
+//       display: inline-block;
+//       border-radius : 5%;        
+//       font-size : 15pt;       
+//       text-align : center;      
+//       cursor : pointer;    
+//       padding: 12px 12px;   
+//       background : #7f4600;    
+//       color: #ffffff;    
+//       line-height: 1em;     
+//       transition: .3s;        
+//       box-shadow : 2px 2px 19px #666666;  
+//       border: 2px solid #7f4600;    
+//     }
+//   }
+// }
+// // ---------------------------------------------------------
+
+// // ユーザープロフィール-----------------------------------------
+// .wrap{
+//   height: 35vh;
+//   .user-main{
+//     .user-top{
+//       .user-image{
+//         width: 100vw;
+//         height: 100%;
+//         .img-profile{
+//           width: 16vw;
+//           height: 27vh;
+//           border-radius:70%;
+//           margin-left: 10vw;
+//           margin-top: 2vh;
+//           border: 4px solid #EEEEEE;
+//         }
+//           .user-profile{
+//             width:50vw;
+//             height: 18vh;
+//             margin-right:18vw ;
+//             margin-top: 7vh;
+//             border: 2px solid #EEEEEE;
+//             float: right;
+//             .user-add{
+//               width: 11vw;
+//               height: 15%;
+//               margin-top: 12vh;
+//               float: right;
+//               .profi{
+//                 color: #7f4600;
+//               }
+//             }
+//           }
+//       }           
+//     }
+//   }
+// }
+// // ------------------------------------------------------------
+// // show---------------------------------------------------------
+//   .wrapper-down{
+//     height: calc(100%-119.34px);
+//     padding: 0 10vw;
+//     background-color: #EEEEEE;
+//     .content-image{
+//       height: 100%;
+//       background-color:#ffffff;
+//       overflow: scroll;
+//       .wrapper-image{
+//         height: 30vh;
+//         width: 50vw;
+//         .image5{
+//           margin: 5vh 26vh;
+//           height: 50vh;
+//           width: 50vw;
+//           border: 3px solid #DEB887;
+//         }
+//       }
+//       .wrapper-content{
+//         height: 30%;
+//         margin-top:30vh;
+//         padding: 0vh 5vw 5vh 5vw;
+//         .top-title{
+//           height: 5vh;
+//           text-align: center;
+//           font-size: 2vw;
+//           color: #333;
+//         }
+//       }
+//       .time{
+//         color: grey;
+//         margin-left: 1vw;
+//       }
+//       .comment-wrap{
+//         height: 20vh;
+//         .iine{
+//           color: red;
+//           width: 10vw;
+//           height: 10vh;
+//           form{
+//             width: 5vw;
+//             height: 7vh;
+//             text-align: center;
+//             margin-left: 1vw;
+//             input{
+//               width: 10vw;
+//             }
+//           }
+//         }
+//         .comments{
+//           width: 40vw;
+//           height: 10vh;
+//           margin: 0 auto;
+//           text-align: center;
+//           textarea{
+//             text-align: center;
+//             width: 40vw;
+//             border: 3px solid #EEEEEE;
+//           }
+//           input{
+//             border: 2px solid #EEEEEE;
+//           }
+//         }
+//         .comment-part{
+//           height: 20%;
+//           text-align: center;
+//           a{
+//           }
+//           strong{
+//             font-size: 1.5vh;
+//           }
+//         }
+//       }
+//       .button-12{
+//         height: 5vh;
+//         margin: 0 auto;
+//         display: block;
+//       }
+//     }
+//   }
+
+// // ----------------------------------------------------------
+
+// // 自己紹介作成------------------------------------------------
+// .wr{
+//   width:100vw;
+//   height:80vh;
+//   .wr1{
+//     width: 60%;
+//     margin: 0 auto;
+//     .intro{
+//       margin-top: 5vh;
+//       height: 40vh;
+//       width: 100%;
+//     }
+//     .send{
+//       margin-top: 2vh;
+//       width: 10vw;
+//       height: 6vh;
+//       background-color: #7f4600;
+//       box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
+//       border-radius: 10%;
+//     }
+//   }
+// }

@@ -1,3 +1,8 @@
+<% flash.each do |diary_type, diary| %>
+    <div class="alert alert-<%= diary_type %>">
+      <%= diary %>
+    </div>
+<% end %>
 <div class="new-wrapper">
   <h2>Sign up</h2>
   <div class="header-yes">
@@ -7,11 +12,11 @@
     <%= render "devise/shared/error_messages", resource: resource %>
     <div class="field">
     <%= f.label :nickname %><br />
-    <%= f.text_field :nickname, autofocus: true %>
+    <%= f.text_field :nickname, placeholder: :'sample', autofocus: true %>
   </div>
     <div class="field">
       <%= f.label :email %><br />
-      <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+      <%= f.email_field :email, placeholder: :'sample@sample', autofocus: true, autocomplete: "email" %>
     </div>
 
     <div class="field">
@@ -19,12 +24,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <%= f.password_field :password, autocomplete: "new-password" %>
+      <%= f.password_field :password, placeholder: :'sample', autocomplete: "new-password" %>
     </div>
 
     <div class="field">
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+      <%= f.password_field :password_confirmation, placeholder: :'sample', autocomplete: "new-password" %>
     </div>
 
     <div class="field">

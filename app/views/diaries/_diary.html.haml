@@ -1,17 +1,14 @@
-.diary
-  .card-list
-    = link_to diary_path(diary.id) do
-      .card-item
-        .card-img
-          .img:hover
-            = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
-        .card-title
-          残り
-          = diary.date.ceil(0)
-          日
-        .card-content
-          = diary.content.slice(0..13,)
-          -# = link_to diary_path(diary), placeholder: :readmore
-          .content-name
-            .content-names
-              = link_to diary.user.nickname, user_path(diary.user), class: :name
+.main-middle__diary
+  .main-middle__diary__top
+    = link_to diary_path(diary.id), class: 'post' do
+      .main-middle__diary__top__image
+        = image_tag diary.image.url, class: 'img', alt: "顔写真1" if diary.image.present?
+      -# - if diary.image 
+      -#   = image_tag "no.png"
+    .main-middle__diary__bottom
+      %span.main-middle__diary__top__image__name
+        = link_to diary.user.nickname, user_path(diary.user), class: 'name' 
+      .main-middle__diary__bottom__goal
+        残り
+        = diary.date.ceil(0)
+        日

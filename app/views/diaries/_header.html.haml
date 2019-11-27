@@ -1,38 +1,61 @@
-.top-header
-  .header-line
-    .header-right
-      .user-prf
-        - if user_signed_in?
-          = image_tag current_user.image.url,  class: 'user-image'
-          .name
+.header
+  .header-middle
+    .header-middle__top
+      .header-middle__top__icon
+        = link_to root_path, class: 'link' do
+          = image_tag 'image8.png', class: 'goaldiary'
+    .header-middle__bottom
+      .header-middle__bottom__left
+        - if user_signed_in? 
+          .header-middle__bottom__left__logout
+            = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
+        - else
+          .header-middle__bottom__left__login
+            = link_to "ログイン", new_user_session_path, class: 'log-in'
+          .header-middle__bottom__left__sigiup
+            = link_to "新規登録", new_user_registration_path, class: 'create'
+      .header-middle__bottom__right
+        .header-middle__bottom__right__image
+          - if user_signed_in?
+            = image_tag current_user.image.url, class: 'user-image'
+          .header-middle__bottom__right__image__name
             = link_to current_user.nickname, user_path(current_user), class: 'user-name'
+
+-# .top-header
+-#   .header-line
+-#     .header-right
+-#       .user-prf
+-#         - if user_signed_in?
+-#           = image_tag current_user.image.url,  class: 'user-image'
+-#           .name
+-#             = link_to current_user.nickname, user_path(current_user), class: 'user-name'
         -# - if user_signed_in? 
         -# = link_to "新規投稿", new_diary_path(@diary), class: 'toukou'
         -# = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
         -# = link_to current_user.nickname, user_path(current_user), class: 'user-name'
-    .header-left
-      - if user_signed_in?
-        = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
-      - else
-        = link_to "ログイン", new_user_session_path, class: 'log-in'
+    -# .header-left
+      -# - if user_signed_in?
+        -# = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
+      -# - else
+        -# = link_to "ログイン", new_user_session_path, class: 'log-in'
       -# .searchArea
         -# .searchText
         -# .searchButton
-  .activemessage
-  -# .nav
-  -#   .navvar
-  -#     = image_tag "photo.jpeg", class: 'img1', alt: "顔写真1"
-  -#     .over
-  -#       Start Line
-  %nav.my-parts
-    %ul
-      %li
-        = link_to "ホーム", root_path(@diary)
-      %li
-        = link_to "おすすめ" 
-        -# %a{:href => "#"} お知らせ
-      %li
-        = link_to "新規投稿", new_diary_path(@diary), class: 'toukou'
+  -# .activemessage
+  -# -# .nav
+  -# -#   .navvar
+  -# -#     = image_tag "photo.jpeg", class: 'img1', alt: "顔写真1"
+  -# -#     .over
+  -# -#       Start Line
+  -# %nav.my-parts
+  -#   %ul
+  -#     %li
+  -#       = link_to "ホーム", root_path(@diary)
+  -#     %li
+  -#       = link_to "おすすめ" 
+  -#       -# %a{:href => "#"} お知らせ
+  -#     %li
+  -#       = link_to "新規投稿", new_diary_path(@diary), class: 'toukou'
         -# = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
       -# %li
       -#   = link_to "ログイン", new_user_session_path, class: 'log-in'

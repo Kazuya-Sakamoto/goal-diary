@@ -28,3 +28,12 @@ $(function(){
     })
   });
 });
+
+$(document).ready(function() {
+  $('.js-replace-no-image').error(function() {
+      $(this).attr({
+          src: 'no.png',
+          alt: 'no image'
+      });
+  });
+});

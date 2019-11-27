@@ -2,11 +2,11 @@ class LikesController < ApplicationController
     before_action :current_user
 
     def create
+      # @diary = Diary.find(params[:id])
       Like.create(like_params)
       respond_to do |format|
         format.html { redirect_to root_path, notice: 'いいねしました'}
         format.json
-        # binding.pry
       end
     end
 

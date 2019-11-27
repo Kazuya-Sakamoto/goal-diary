@@ -15,3 +15,62 @@
     <%= yield %>
   </body>
 </html>
+<%# -# !!!
+-# %html
+-#   %head
+-#     %title FreemarketSample63f
+-#     %csrf_meta_tags
+-#     %csp_meta_tag
+-#     = stylesheet_link_tag      'application', media: 'all', data: { turbolinks: { track: true }}
+-#     = javascript_include_tag   'application', data: { turbolinks: { track: true }}
+-#   %body
+    -# .wrapper
+    -#   = render partial: "header"
+    -#   .main
+    -#     .main-middle
+    -#       = render @diaries
+    -#   .footer
+    -#     .footer-bottom
+    -#       .footer-bottom__middle
+    -#         .footer-bottom__middle__about
+    -#           %h1.footer-bottom__middle__about__goaldiary
+    -#             Goal-diaryについて
+    -#             %ul.footer-bottom__middle__about__goaldiary__description
+    -#               〜説明〜
+    -#               %li.footer-bottom__middle__about__goaldiary__description__consept
+    -#                 コンセプト
+    -#               %li.footer-bottom__middle__about__goaldiary__description__sakamoto
+    -#                 製作者から
+    -#               %li.footer-bottom__middle__about__goaldiary__description__use
+    -#                 使用上の注意
+    -#         .footer-bottom__middle__help
+    -#           %h2.footer-bottom__middle__help__link
+    -#             Link
+    -#             %ul.footer-bottom__middle__help__link__description
+    -#               sakamoto
+    -#               %li.footer-bottom__middle__help__link__description__twitter
+    -#                 twitter
+    -#               %li.footer-bottom__middle__help__link__description__note
+    -#                 note
+    -#               %li.footer-bottom__middle__help__link__description__detail
+    -#                 detail
+    -#         .footer-bottom__middle__howto
+    -#           %h2.footer-bottom__middle__howto__procedure
+    -#             How to
+    -#             %ul.footer-bottom__middle__howto__procedure__description
+    -#               使用方法
+    -#               %li.footer-bottom__middle__howto__procedure__description__start
+    -#                 はじめに
+    -#               %li.footer-bottom__middle__howto__procedure__description__short
+    -#                 短期目標
+    -#               %li.footer-bottom__middle__howto__procedure__description__long
+    -#                 長期目標
+    -#       .footer-bottom__under
+    -#         .footer-bottom__under__logo
+    -#         .footer-bottom__under__copy
+    -#   .foot
+    -#     .foot-btn
+    -#       .foot-btn__name
+    -#         = link_to "投稿", new_diary_path(@diary), class: 'toukou'
+          
+    = yield  %>

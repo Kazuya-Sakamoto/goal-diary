@@ -1,14 +1,34 @@
-= render partial: "header"
-.wrap
-  .user-main
-    .user-top
-      .user-image
-        = image_tag @user.image.url, class: 'img-profile' if @user.image.present?
-        .user-profile
-          = @user.introduction
-          .user-add
-            = link_to "自己紹介の追加", edit_user_path(@user), class: :profi
 .wrapper
-  .diaries
-    = render @diaries
-    = paginate(@diaries)
+  = render partial: "header"
+  .wrap
+    .wrap-middle
+      .wrap-middle__header
+        .wrap-middle__header__side
+          = image_tag current_user.image.url, class: 'user-image'
+        .wrap-middle__header__main
+          = @user.introduction
+        .wrap-middle__header__bottom
+        - if user_signed_in? && current_user.id
+          = link_to "自己紹介編集", edit_user_path(@user), class: 'edit'
+      .wrap-middle__middle
+        .main
+          = render @diaries, class: 'diary'
+          = paginate(@diaries)
+      .wrap-middle__bottom
+        -# = render @diaries
+
+
+-# = render partial: "header"
+-# .wrap
+-#   .user-main
+-#     .user-top
+-#       .user-image
+-#         = image_tag @user.image.url, class: 'img-profile' if @user.image.present?
+-#         .user-profile
+-#           = @user.introduction
+-#           .user-add
+-#             = link_to "自己紹介の追加", edit_user_path(@user), class: :profi
+-# .wrapper
+-#   .diaries
+-#     = render @diaries
+-#     = paginate(@diaries)
