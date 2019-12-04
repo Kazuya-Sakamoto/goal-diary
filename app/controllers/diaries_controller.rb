@@ -4,7 +4,11 @@ class DiariesController < ApplicationController
 
   def index
     @diaries = Diary.includes(:user).page(params[:page]).per(20).order("created_at DESC") #順番大事 page→per→order
+    # @user = Use.find(params[:id])
     # @diary = Diary.all
+    # @user = Diary.find(:user)
+    # @user = current_user.id
+    # @nickname = current_user.nickname
   end
   
   def new
@@ -16,8 +20,14 @@ class DiariesController < ApplicationController
   end
 
   def create
-    Diary.create(diary_params)
-    redirect_to root_path
+    # date = @diary.date
+    goal = Diary.new
+    if goal.dates(diary_params[:goal]) >= 1
+      Diary.create(diary_params)
+      redirect_to root_path
+    else 
+      render :new, notice: '投稿には登録が必要です!'
+    end
   end
 
   def show

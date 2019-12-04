@@ -7,6 +7,8 @@
 |password|string|null: false|
 |profile|string|
 |image|string|
+|introduction|string|
+|goal|string|null: false|
 ### Asociation
 - has_many :diarys
 - has_many :comments

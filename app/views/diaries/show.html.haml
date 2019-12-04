@@ -3,17 +3,25 @@
   .content
     .content__middle
       .content__middle__top
-        目標まで
+        = @diary.user.goal
+        まで
         = @diary.date.ceil(0)
         日
         .content__middle__top__middle
       .content__middle__middle
-        = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
+        - if @diary.image.present?
+          = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
+        - else
+          = image_tag "no.png", class: 'image5'
+        .content__middle__middle__right
+          .content__middle__middle__right__name
+            = @diary.user.nickname
+          = @diary.content
       .content__middle__bottom
         .content__middle__bottom__top
-          = @diary.user.nickname
+          -# = @diary.user.nickname
         .content__middle__bottom__text
-          = @diary.content
+          -# = @diary.content
         .content__middle__bottom__times
           = @diary.created_at.to_s(:datetime_jp)
           - if user_signed_in? && current_user.id == @diary.user_id
@@ -21,8 +29,8 @@
             = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
         .content__middle__bottom__likes
           - if user_signed_in?
-            = form_with model: [@diary, @like], local: true do |iine|
-              = iine.submit :❤️, placeholder: :❤️
+            = form_with model: [@diary, @like], class: 'form' do |iine|
+              = iine.submit :♡, class: 'iine'
               = @diary.likes.count
 
         .content__middle__bottom__comments
@@ -37,7 +45,7 @@
         - if user_signed_in?
           = form_with model: [@diary, @comment], local: true do |f|
             = f.text_area :text, placeholder: :コメント, class: 'text'
-            = f.submit 'send'
+            = f.submit 'send', class: 'comment'
         .content__middle__under__bottom
         .content__middle__under__comment
           
