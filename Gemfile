@@ -72,4 +72,6 @@ gem 'counter_culture', '~> 1.8'
 
 gem 'kaminari'
 
+gem 'font-awesome-sass'
+
 gem 'jquery-rails'

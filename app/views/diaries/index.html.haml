@@ -44,7 +44,8 @@
         .footer-bottom__under__logo
           = image_tag 'image10.png', class: 'goaldiary'
         .footer-bottom__under__copy
-  .foot
+  = link_to new_diary_path, class: 'foot' do
     .foot-btn
+      日記作成
       .foot-btn__name
-        = link_to "投稿", new_diary_path(@diary), class: 'toukou'
+        = icon 'fas', 'pen',class: 'pencil'
