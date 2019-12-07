@@ -46,13 +46,13 @@ $(function(){
       $('.form').append(html);
       // console.log('doneにいってるよ')
     })
-    // .done(function(data){
-    //   // 通信に成功した場合の処理です
-    //   $('.iine').empty(); //前回の検索結果が残っている場合はそれを消します
-    //   data.forEach(function(html){
-    //     $('.iine').append(html);
-    //   }) //データは配列形式でかえってくるので、forEachで繰り返し処理をします
-    // })
+    .done(function(data){
+      // 通信に成功した場合の処理です
+      $('.iine').empty(); //前回の検索結果が残っている場合はそれを消します
+      data.forEach(function(html){
+        $('.iine').append(html);
+      }) //データは配列形式でかえってくるので、forEachで繰り返し処理をします
+    })
     .fail(function(){
       console.log('失敗');
     })

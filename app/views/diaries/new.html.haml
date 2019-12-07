@@ -24,16 +24,3 @@
           %label.contents__bottom__middle__bottom__btn{for: 'bottonn'}
             = f.submit '投稿', placeholder: :投稿, class: 'hidden', id: 'bottonn'
             投稿する
-
--# = form_with model: @diary, local: true do |f|
--#   = render partial: "header"  
--#   .contents
--#     %p 日記作成
--#     .date
--#       = f.date_field :goal, placeholder: :目標の日にち, class: :date
--#     .image-space
--#       = f.file_field :image, placeholder: :画像投稿, class: :button
--#     .posts
--#       = f.text_area :content, placeholder: :文字数指定100文字, class: :content
--#     .foot
--#       = f.submit '投稿する', class: 'form2'
