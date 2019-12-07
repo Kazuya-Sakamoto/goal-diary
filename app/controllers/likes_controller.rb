@@ -12,6 +12,14 @@ class LikesController < ApplicationController
     end
   end
 
+  def destory
+    @diary = Diary.find(params[:diary_id])
+    @like = Like.destory(like_params)
+    if respond_to do |format|
+      format.json
+    end
+  end
+
   private
   def like_params
     params.permit().merge(user_id: current_user.id, diary_id: params[:diary_id])
