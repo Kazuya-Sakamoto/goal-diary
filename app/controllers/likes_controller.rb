@@ -20,9 +20,10 @@ class LikesController < ApplicationController
     end
   end
 
-  private
-  def like_params
-    params.permit().merge(user_id: current_user.id, diary_id: params[:diary_id])
+    private
+    def like_params
+      params.permit().merge(user_id: current_user.id, diary_id: params[:diary_id])
+    end
   end
 end
 
