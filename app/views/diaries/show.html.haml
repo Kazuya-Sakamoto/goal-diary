@@ -12,7 +12,7 @@
         - if @diary.image.present?
           = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
         - else
-          = image_tag "no.png", class: 'image5'
+          -# = image_tag "no.png", class: 'image5'
         .content__middle__middle__right
           .content__middle__middle__right__name
             = @diary.user.nickname

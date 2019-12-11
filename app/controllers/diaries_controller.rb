@@ -26,7 +26,7 @@ class DiariesController < ApplicationController
   end
 
   def show
-    @user = User.find(current_user[:id])
+    # @user = User.find(current_user[:id])
     @comment = Comment.new
     @comments = @diary.comments.includes(:user)
     @like = Like.new

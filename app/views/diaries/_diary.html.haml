@@ -5,7 +5,7 @@
         - if diary.image.present?
           = image_tag diary.image.url, class: 'img', alt: "顔写真1" 
         - else
-          = image_tag "no.png", class: 'img'
+          -# = image_tag "no.png", class: 'img'
     .main-middle__diary__bottom
       %span.main-middle__diary__top__image__name
         = link_to diary.user.nickname, user_path(diary.user), class: 'name' 
