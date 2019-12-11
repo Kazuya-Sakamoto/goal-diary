@@ -4,11 +4,6 @@ class DiariesController < ApplicationController
 
   def index
     @diaries = Diary.includes(:user).page(params[:page]).per(20).order("created_at DESC") #順番大事 page→per→order
-    # @user = Use.find(params[:id])
-    # @diary = Diary.all
-    # @user = Diary.find(:user)
-    # @user = current_user.id
-    # @nickname = current_user.nickname
   end
   
   def new
@@ -31,7 +26,7 @@ class DiariesController < ApplicationController
   end
 
   def show
-    # @user = User.find(params[:id])
+    @user = User.find(current_user[:id])
     @comment = Comment.new
     @comments = @diary.comments.includes(:user)
     @like = Like.new

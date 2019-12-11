@@ -16,8 +16,8 @@
             = link_to "新規登録", new_user_registration_path, class: 'create'
       .header-middle__bottom__right
         .header-middle__bottom__right__image
-          -# - if user_signed_in?
-          -#   = image_tag current_user.image.url, class: 'user-image'
+          - if user_signed_in?
+            = image_tag current_user.image.url, class: 'user-image'
           .header-middle__bottom__right__image__name
             - if user_signed_in?
               = link_to current_user.nickname, user_path(current_user), class: 'user-name'
