@@ -13,7 +13,7 @@
     box-shadow: rgba(0, 0, 0, 0.986) 0px 2px 4px;
     // background-color: rgba(12, 9, 9, 0.034);
     &__top{
-      font-family: 'Corben', cursive;
+      font-family: floor($number: 0);
       height: 2vh;
       width: 30%;
       padding:60px 60px 30px 60px;

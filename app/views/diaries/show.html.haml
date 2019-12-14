@@ -12,39 +12,39 @@
         - if @diary.image.present?
           = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
         - else
-          -# = image_tag "no.png", class: 'image5'
-        .content__middle__middle__right
-          .content__middle__middle__right__name
-            = @diary.user.nickname
-          = @diary.content
-      .content__middle__bottom
-        .content__middle__bottom__top
-          -# = @diary.user.nickname
-        .content__middle__bottom__text
-          -# = @diary.content
-        .content__middle__bottom__times
-          = @diary.created_at.to_s(:datetime_jp)
-          - if user_signed_in? && current_user.id == @diary.user_id
-            = link_to "編集", edit_diary_path(@diary.id), class:"edit"
-            = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
-        .content__middle__bottom__likes
-          - if user_signed_in?
-            = form_with model: [@diary, @like], class: 'form' do |iine|
-              = iine.submit :♡, class: 'iine'
-              = @diary.likes.count
+          = image_tag "no.png", class: 'image5'
+      -#   .content__middle__middle__right
+      -#     .content__middle__middle__right__name
+      -#       = @diary.user.nickname
+      -#     = @diary.content
+      -# .content__middle__bottom
+      -#   .content__middle__bottom__top
+      -#     = @diary.user.nickname
+      -#   .content__middle__bottom__text
+      -#     = @diary.content
+      -#   .content__middle__bottom__times
+      -#     = @diary.created_at.to_s(:datetime_jp)
+      -#     - if user_signed_in? && current_user.id == @diary.user_id
+      -#       = link_to "編集", edit_diary_path(@diary.id), class:"edit"
+      -#       = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
+      -#   .content__middle__bottom__likes
+      -#     - if user_signed_in?
+      -#       = form_with model: [@diary, @like], class: 'form' do |iine|
+      -#         = iine.submit :♡, class: 'iine'
+      -#         = @diary.likes.count
 
-        .content__middle__bottom__comments
-          - if @comments.length != 0
-            - @comments.each do |c|
-            %p
-              %strong
-                = c.text 
-                  = image_tag current_user.image.url, class: 'user-image'
-                  = link_to c.user.nickname, user_path, class: 'name'
-      .content__middle__under
-        - if user_signed_in?
-          = form_with model: [@diary, @comment], local: true do |f|
-            = f.text_area :text, placeholder: :コメント, class: 'text'
-            = f.submit 'send', class: 'comment'
-        .content__middle__under__bottom
-        .content__middle__under__comment
+      -#   .content__middle__bottom__comments
+      -#     - if @comments.length != 0
+      -#       - @comments.each do |c|
+      -#       %p
+      -#         %strong
+      -#           = c.text 
+      -#             = image_tag current_user.image.url, class: 'user-image'
+      -#             = link_to c.user.nickname, user_path, class: 'name'
+      -# .content__middle__under
+      -#   - if user_signed_in?
+      -#     = form_with model: [@diary, @comment], local: true do |f|
+      -#       = f.text_area :text, placeholder: :コメント, class: 'text'
+      -#       = f.submit 'send', class: 'comment'
+      -#   .content__middle__under__bottom
+      -#   .content__middle__under__comment

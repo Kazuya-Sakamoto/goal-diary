@@ -59,6 +59,7 @@ $(function(){
   });
 });
 
+
 // $(document).ready(function() {
 //   $('.js-replace-no-image').error(function() {
 //       $(this).attr({
