@@ -1,5 +1,8 @@
 .wrapper
   = render partial: "header"
+  .main
+    .main__sidebar
+      = render partial: "sidebar"
   .content
     .content__middle
       .content__middle__top
@@ -13,6 +16,7 @@
           = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
         - else
           = image_tag "no.png", class: 'image5'
+  -# = render patical: 'footer'
       -#   .content__middle__middle__right
       -#     .content__middle__middle__right__name
       -#       = @diary.user.nickname
