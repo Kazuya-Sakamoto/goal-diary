@@ -35,7 +35,7 @@ html{
     // position: absolute;
     position: relative;
     z-index: 3;
-    box-shadow: rgba(0, 0, 0, 0.26) 0px 2px 4px;
+    box-shadow: rgba(0, 0, 0, 0.445) 0px 2px 4px;
     background-color: rgb(255, 255, 255);
     // background-color: rgb(34, 34, 34);
     // position: fixed;
@@ -238,6 +238,16 @@ html{
       z-index: 2;
       // display: flex;
       display: block;
+      .side-bar-link{
+        text-decoration: none;
+        color: #FFFFFF;
+      }
+      .side-bar-link:hover{
+        background-color:  rgb(253, 253, 253);
+        border: 2px solid rgb(253, 253, 253);
+        color: rgba(61, 234, 45, 0.753);
+        padding: 0 0 0 20px;
+      }
       &__link{
         width: 100%;
         height: 8vh;
@@ -246,7 +256,7 @@ html{
           border-start-end-radius: 10%;
           width:100%;
           height: 100%;
-          background-color:  rgba(234, 54, 45, 0.644);
+          background-color:  rgba(61, 234, 45, 0.753);
           color: #FFFFFF;
           &__menu{
             padding: 20px 0 30px 0;
@@ -257,7 +267,7 @@ html{
         &__box:hover{
           background-color:  rgb(253, 253, 253);
           border: 2px solid rgb(253, 253, 253);
-          color: rgb(234, 53, 45);
+          color: rgba(61, 234, 45, 0.753);
           padding: 0 0 0 20px;
         }
       }
@@ -299,7 +309,7 @@ html{
               letter-spacing: .02em;
               margin: 0;
               padding: 0 12px;
-              background: rgba(212, 15, 15, 0.4);
+              background: rgba(61, 234, 45, 0.541);
               border-radius: 0 14px 14px 0;
               z-index: 1;
               color: white;
@@ -528,7 +538,7 @@ html{
       width: 150px;
       height: 120px;
       padding-top: 30px;
-      background-color: rgba(234, 54, 45, 0.644);
+      background-color: rgba(61, 234, 45, 0.541);
       border-radius: 50%;
       color: white;
       text-align: center;

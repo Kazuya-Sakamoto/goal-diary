@@ -16,6 +16,15 @@
           = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
         - else
           = image_tag "no.png", class: 'image5'
+        .content__middle__middle__right
+          = @diary.content
+      .content__middle__bottom
+        - if user_signed_in?
+          = form_with model: [@diary, @comment], local: true do |f|
+            = f.text_area :text, placeholder: :コメント, class: 'text'
+            = f.submit 'send', class: 'comment'
+  = render partial: "footer"
+      
   -# = render patical: 'footer'
       -#   .content__middle__middle__right
       -#     .content__middle__middle__right__name

@@ -1,0 +1,40 @@
+.footer
+  .footer-bottom
+    .footer-bottom__middle
+      .footer-bottom__middle__about
+        %h1.footer-bottom__middle__about__goaldiary
+          Goal-diaryについて
+          %ul.footer-bottom__middle__about__goaldiary__description
+            〜説明〜
+            %li.footer-bottom__middle__about__goaldiary__description__consept
+              コンセプト
+            %li.footer-bottom__middle__about__goaldiary__description__sakamoto
+              製作者から
+            %li.footer-bottom__middle__about__goaldiary__description__use
+              使用上の注意
+      .footer-bottom__middle__help
+        %h2.footer-bottom__middle__help__link
+          Link
+          %ul.footer-bottom__middle__help__link__description
+            sakamoto
+            %li.footer-bottom__middle__help__link__description__twitter
+              = link_to 'twitter', 'https://twitter.com/sakamotokazuyat', class: 'twitter'
+            %li.footer-bottom__middle__help__link__description__note
+              note
+            %li.footer-bottom__middle__help__link__description__detail
+              detail
+      .footer-bottom__middle__howto
+        %h2.footer-bottom__middle__howto__procedure
+          How to
+          %ul.footer-bottom__middle__howto__procedure__description
+            使用方法
+            %li.footer-bottom__middle__howto__procedure__description__start
+              はじめに
+            %li.footer-bottom__middle__howto__procedure__description__short
+              短期目標
+            %li.footer-bottom__middle__howto__procedure__description__long
+              長期目標
+  = link_to new_diary_path, class: 'foot' do
+    .foot-btn
+      日記作成
+      .foot-btn__name
