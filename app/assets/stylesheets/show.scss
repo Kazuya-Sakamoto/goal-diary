@@ -2,15 +2,14 @@
   width: 100vw;
   height: 100%;
   // overflow: scroll;
-  background-color: #EEEEEE;
+  // background-color: #EEEEEE;
 //   background-color: darkblue;
   &__middle{
     margin: 0 auto;
-    width: 85%;
-    height: 100%;
+    width: 75%;
+    height: 100vh;
     overflow: scroll;
     background-color: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0.986) 0px 2px 4px;
     // background-color: rgba(12, 9, 9, 0.034);
     &__top{
       font-family: floor($number: 0);
@@ -45,11 +44,16 @@
           color: rgb(0, 0, 0);
         }
       }
+      &__right{
+        width: 30vw;
+        height: 40vh;
+        padding: 30px;
+      }
     }
     &__bottom{
-    //   width: 90%;
-    //   height: 60vh;
-    // //   background-color: red;
+      width: 90%;
+      height: 20vh;
+      // background-color: red;
       padding: 30px 40px 40px 100px;
       &__top{
         width: 100%;
