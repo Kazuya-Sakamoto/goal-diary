@@ -23,6 +23,18 @@
           = form_with model: [@diary, @comment], local: true do |f|
             = f.text_area :text, placeholder: :コメント, class: 'text'
             = f.submit 'send', class: 'comment'
+        -# .content__middle__bottom__likes
+        -#   = form_with model: [@diary, @like], class: 'form' do |iine|
+        -#     = iine.submit :♡, class: 'iine'
+        -#     = @diary.likes.count
+      .content__middle__comments
+        - if @comments.length != 0
+          - @comments.each do |c|
+          %p
+            %strong
+              = c.text 
+                = image_tag current_user.image.url, class: 'user-image'
+                -# = link_to current_user.nickname, user_path, class: 'name'
   = render partial: "footer"
       
   -# = render patical: 'footer'

@@ -7,7 +7,7 @@
   &__middle{
     margin: 0 auto;
     width: 75%;
-    height: 100vh;
+    height: 100%;
     overflow: scroll;
     background-color: #FFFFFF;
     // background-color: rgba(12, 9, 9, 0.034);
@@ -50,6 +50,17 @@
         padding: 30px;
       }
     }
+    &__comments{
+      margin: 0 auto;
+      width: 50%;
+      height: 100%;
+      background-color:rgba(62, 214, 23, 0.445);
+      .user-image{
+        width: 80px;
+        height: 50px;
+        border-radius: 10%;
+      }
+    }
     &__bottom{
       width: 90%;
       height: 20vh;
@@ -63,9 +74,9 @@
         font-size: 30px;
         margin-left: 7vw;
       }
-      &__text{
-        width: 76%;
-        height: 30%;
+      .text{
+        width: 48%;
+        height: 50px;
         margin: 10px auto;
         background-color: #FFFFFF;
         // border: 2px solid #EEEEEE;
@@ -82,14 +93,15 @@
         // background-color: #EEEEEE;
         color: grey;
       }
-      &__comments{
-        width: 40%;
-        height: 30%;
+      .comment{
+        width: 30%;
+        height: 20%;
         margin: 20px 0 0 0;
+        // float: left;
         // background-color: #EEEEEE;
-        padding: 40px;
-        overflow: scroll;
-        background-color:rgba(194, 7, 7, 0) ;
+        padding: 5px;
+        color: #FFFFFF;
+        background-color:rgba(82, 194, 7, 0.548) ;
         .texts{
           padding: 10px;
           width: 10%;
@@ -107,6 +119,9 @@
           border-radius: 30px;
           padding: 5px;
         }
+      }
+      .comment:hover{
+        opacity: 0.6;
       }
     }
     &__under{
