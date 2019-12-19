@@ -3,6 +3,10 @@
   .main
     .main__sidebar
       = render partial: "sidebar"
+    .main__center
+      .main__center__middle
+        Goal-diary
+        .main__center__middle__bottom
     .main-middle
       = render @diaries
       = paginate(@diaries)
