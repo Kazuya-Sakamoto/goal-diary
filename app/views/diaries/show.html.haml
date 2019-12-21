@@ -3,6 +3,7 @@
   .main
     .main__sidebar
       = render partial: "sidebar"
+  = render partial: "image"
   .content
     .content__middle
       .content__middle__top
@@ -36,7 +37,7 @@
           %p
             %strong
               = c.text 
-                = image_tag current_user.image.url, class: 'user-image'
+                -# = image_tag current_user.image.url, class: 'user-image'
                 -# = link_to current_user.nickname, user_path, class: 'name'
   = render partial: "footer"
       

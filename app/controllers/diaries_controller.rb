@@ -3,7 +3,7 @@ class DiariesController < ApplicationController
   # before_action :move_to_registration, except: [:index, :show]
 
   def index
-    @diaries = Diary.includes(:user).page(params[:page]).per(20).order("created_at DESC") #順番大事 page→per→order
+    @diaries = Diary.includes(:user).page(params[:page]).per(12).order("created_at DESC") #順番大事 page→per→order
   end
   
   def new
