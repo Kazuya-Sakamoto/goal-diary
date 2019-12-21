@@ -4,9 +4,12 @@
     .main__sidebar
       = render partial: "sidebar"
     .main__center
-      .main__center__middle
-        Goal-diary
-        .main__center__middle__bottom
+      = image_tag 'book.jpeg', class:'book'
+      -# .main__center__wrap-video
+        -# = video_tag '/public/videos/nisi.mp4', controls: true, autoplay: false, roop: true, class: 'video'
+      -# .main__center__middle
+      -#   .main__center__middle__bottom
+      -#     Goal-diary
     .main-middle
       = render @diaries
       = paginate(@diaries)
