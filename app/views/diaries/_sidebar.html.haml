@@ -1,29 +1,23 @@
 .main__sidebar__link
   .main__sidebar__link__box
-    -# = link_to user_path(current_user),class: 'side-bar-link' do
-    %li.main__sidebar__link__box__menu 人気
+    = link_to "/diaries/category/1", class: 'side-bar-link' do
+      %li.main__sidebar__link__box__menu 夢
 .main__sidebar__link
   .main__sidebar__link__box
-    -# = link_to user_path(current_user),class: 'side-bar-link' do
-    %li.main__sidebar__link__box__menu 夢
+    = link_to "/diaries/category/2", class: 'side-bar-link' do
+      %li.main__sidebar__link__box__menu 仕事
 .main__sidebar__link
   .main__sidebar__link__box
-    -# = link_to user_path(current_user),class: 'side-bar-link' do
-    %li.main__sidebar__link__box__menu 試験
+    = link_to "/diaries/category/3", class: 'side-bar-link' do
+      %li.main__sidebar__link__box__menu 試験
 .main__sidebar__link
   .main__sidebar__link__box
-    - if user_signed_in?
-      = link_to user_path(current_user),class: 'side-bar-link' do
-        %li.main__sidebar__link__box__menu 恋愛
-    - else 
-      %li.main__sidebar__link__box__menu  恋愛
+    = link_to "/diaries/category/3", class: 'side-bar-link' do
+      %li.main__sidebar__link__box__menu 恋愛
 .main__sidebar__link
   .main__sidebar__link__box
-    - if user_signed_in?
-      = link_to user_path(current_user),class: 'side-bar-link' do
-        %li.main__sidebar__link__box__menu スポーツ
-    - else 
-      %li.main__sidebar__link__box__menu  スポーツ
+    = link_to "/diaries/category/3", class: 'side-bar-link' do
+      %li.main__sidebar__link__box__menu スポーツ
 .main__sidebar__link
   .main__sidebar__link__box
     - if user_signed_in?

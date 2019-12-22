@@ -6,4 +6,5 @@ Rails.application.routes.draw do
     resources :comments, only: :create
   end
   resources :users, only: [:show, :edit, :update]
+  get "/diaries/category/:category_id", to: "diaries#category"
 end
