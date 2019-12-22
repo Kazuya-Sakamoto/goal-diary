@@ -4,7 +4,7 @@
     .main__sidebar
       = render partial: "sidebar"
     .main__center
-      = image_tag 'book.jpeg', class:'book'
+      = render partial: "image"
       -# .main__center__wrap-video
         -# = video_tag '/public/videos/nisi.mp4', controls: true, autoplay: false, roop: true, class: 'video'
       -# .main__center__middle
@@ -13,49 +13,6 @@
     .main-middle
       = render @diaries
       = paginate(@diaries)
-  .footer
-    -# = render partial: "footer"
-    .footer-bottom
-      .footer-bottom__middle
-        .footer-bottom__middle__about
-          %h1.footer-bottom__middle__about__goaldiary
-            Goal-diaryについて
-            %ul.footer-bottom__middle__about__goaldiary__description
-              〜説明〜
-              %li.footer-bottom__middle__about__goaldiary__description__consept
-                コンセプト
-              %li.footer-bottom__middle__about__goaldiary__description__sakamoto
-                製作者から
-              %li.footer-bottom__middle__about__goaldiary__description__use
-                使用上の注意
-        .footer-bottom__middle__help
-          %h2.footer-bottom__middle__help__link
-            Link
-            %ul.footer-bottom__middle__help__link__description
-              sakamoto
-              %li.footer-bottom__middle__help__link__description__twitter
-                = link_to 'twitter', 'https://twitter.com/sakamotokazuyat', class: 'twitter'
-              %li.footer-bottom__middle__help__link__description__note
-                note
-              %li.footer-bottom__middle__help__link__description__detail
-                detail
-        .footer-bottom__middle__howto
-          %h2.footer-bottom__middle__howto__procedure
-            How to
-            %ul.footer-bottom__middle__howto__procedure__description
-              使用方法
-              %li.footer-bottom__middle__howto__procedure__description__start
-                はじめに
-              %li.footer-bottom__middle__howto__procedure__description__short
-                短期目標
-              %li.footer-bottom__middle__howto__procedure__description__long
-                長期目標
-      .footer-bottom__under
-        .footer-bottom__under__logo
-          -# = image_tag 'image10.png', class: 'goaldiary'
-        .footer-bottom__under__copy
-  = link_to new_diary_path, class: 'foot' do
-    .foot-btn
-      日記作成
-      .foot-btn__name
+    = render partial: "footer"
+  -#     .foot-btn__name
         -# = icon 'fas', 'pen',class: 'pencil'

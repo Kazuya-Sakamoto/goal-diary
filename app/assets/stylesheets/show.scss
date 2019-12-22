@@ -29,6 +29,12 @@
       padding: 50px 50px 0px 100px;
     //   background-color: aquamarine;
       display: flex;
+      .edit{
+        color: #FFFFFF;
+      }
+      .destory{
+        color: #FFFFFF;
+      }
       .image5{
         padding: 15px;
         width: 45%;
@@ -36,7 +42,7 @@
         box-shadow: rgba(0, 0, 0, 0.774) 0px 2px 4px;
       }
       .image5:hover{
-        opacity: 0.6;
+        opacity: 0.6; 
       }
       &__right{
         color: #FFFFFF;
@@ -83,7 +89,9 @@
         width: 48%;
         height: 50px;
         margin: 10px auto;
-        background-color: #FFFFFF;
+        background-color: rgb(255, 255, 255);
+        opacity: 0.5;
+        color: rgb(0, 0, 0);
         // border: 2px solid #EEEEEE;
       }
       &__times{
@@ -96,7 +104,7 @@
         height: 5%;
         padding: 10px 0 0 10px;
         // background-color: #EEEEEE;
-        color: grey;
+        color: rgb(255, 255, 255);
       }
       .comment{
         width: 30%;
