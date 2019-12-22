@@ -22,6 +22,9 @@
           ＜
           = @diary.created_at.to_s(:datetime_jp)
           ＞
+        - if user_signed_in? && current_user.id == @diary.user_id
+          = link_to "編集", edit_diary_path(@diary.id), class:"edit"
+          = link_to "削除", diary_path(@diary.id), method: :delete, class: "destory"
       .content__middle__bottom
         - if user_signed_in?
           = form_with model: [@diary, @comment], local: true do |f|
