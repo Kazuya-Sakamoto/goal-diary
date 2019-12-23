@@ -2,22 +2,24 @@
   .contents__top
     .contents__top__middle
       = link_to root_path, class: 'link' do
-        -# = image_tag 'image8.png', class: 'goaldiary'
+        = image_tag 'logo.png', class: 'goaldiary'
   .contents__bottom
     .contents__bottom__middle
       %p.contents__bottom__middle__header
         日記作成
       = form_with model: @diary, local: true do |f|
         .contents__bottom__middle__middle
-          目標の日にち設定
-          = f.date_field :goal, placeholder: :目標の日にち, class: 'date'
-        .contents__bottom__middle__content
+          カレンダー入力
+          = f.date_field :goal, placeholder: :目標日, class: 'date'
+        %label.contents__bottom__middle__content{for: 'img'}
           画像の投稿
-          = f.file_field :image, placeholder: :画像投稿, class: 'image'
-        .contents__bottom__middle__text
-          日記
-          = f.text_area :content, placeholder: :１００文字以内, class: :content
+          = f.file_field :image, placeholder: :画像投稿, class: 'image', id: 'img'
+        .contents__bottom__middle__category
+          カテゴリー
+          = f.select :category_id, [['夢', '1'], ['仕事', '2'], ['試験', '3'], ['恋愛', '4'], ['スポーツ', '5']]
+        %label.contents__bottom__middle__text
+          = f.text_area :content, placeholder: :１０００文字以内, class: :content
         .contents__bottom__middle__bottom
-          .contents__bottom__middle__bottom__btn
-            投稿
-            = f.submit '投稿', class: 'form2'
+          %label.contents__bottom__middle__bottom__btn{for: 'bottonn'}
+            = f.submit '投稿', placeholder: :投稿, class: 'hidden', id: 'bottonn'
+            投稿する
