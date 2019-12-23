@@ -1,0 +1,29 @@
+.wraper
+  .wraper__header 
+    = link_to root_path, class: 'link' do
+      = image_tag 'logo.png', class: 'goal'
+  .wraper__container
+    .wraper__container__middle
+      .wraper__container__middle__top
+        .wraper__container__middle__top__text
+          %h2 Log in
+      .wraper__container__middle__content
+        .wraper__container__middle__content__top
+          = image_tag 'booklike.png', class:'book'
+        .wraper__container__middle__content__under
+          .wraper__container__middle__content__under__middle
+            = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+              .field
+                = f.label :email, class: 'mail'
+                %br/
+                = f.email_field :email, autofocus: true, autocomplete: "email", class: 'mail-box'
+              .field
+                = f.label :password, class: 'pass'
+                %br/
+                = f.password_field :password, autocomplete: "current-password", class: 'pass-box'
+              - if devise_mapping.rememberable?
+                .field
+                  = f.check_box :remember_me
+                  = f.label :remember_me
+              = f.submit "Log in", url: root_path(@diary), class: 'btn'
+          = render "devise/shared/links"
