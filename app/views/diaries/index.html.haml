@@ -5,11 +5,6 @@
       = render partial: "sidebar"
     .main__center
       = render partial: "image"
-      -# .main__center__wrap-video
-        -# = video_tag '/public/videos/nisi.mp4', controls: true, autoplay: false, roop: true, class: 'video'
-      -# .main__center__middle
-      -#   .main__center__middle__bottom
-      -#     Goal-diary
     .main-middle
       = render @diaries
       = paginate(@diaries)
