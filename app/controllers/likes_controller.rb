@@ -7,7 +7,7 @@ class LikesController < ApplicationController
     @like = Like.new(like_params)
     if @like.save 
       respond_to do |format|
-        # format.html { redirect_to diaries_path, notice: 'いいねしました'}
+        format.html { redirect_to diaries_path, notice: 'いいねしました'}
         format.json 
       end
     end
