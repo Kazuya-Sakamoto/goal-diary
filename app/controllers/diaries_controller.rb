@@ -10,12 +10,10 @@ class DiariesController < ApplicationController
     @diary = Diary.new
     if !user_signed_in?
       redirect_to new_user_registration_path, notice: '投稿には登録が必要です!'
-      # flash.now[:alert] = '登録をしてください'
     end
   end
 
   def create
-    # date = @diary.date
     goal = Diary.new
     if goal.dates(diary_params[:goal]) >= 1
       Diary.create(diary_params)
@@ -26,7 +24,6 @@ class DiariesController < ApplicationController
   end
 
   def show
-    # @user = User.find(current_user[:id])
     @comment = Comment.new
     @comments = @diary.comments.includes(:user)
     @like = Like.new
