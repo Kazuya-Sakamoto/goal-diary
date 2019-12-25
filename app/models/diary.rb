@@ -7,7 +7,7 @@ class Diary < ApplicationRecord
     has_many :likes
     has_many :liked_users, through: :likes, source: :user
 
-# self をメソッドに付与する事で、インスタンスメソッドではなく、クラスメソッドとして定義す
+# self をメソッドに付与する事で、インスタンスメソッドではなく、クラスメソッドとして定義する
     def date
       d1 = self.created_at 
       d2 = self.goal
