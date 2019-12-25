@@ -15,15 +15,6 @@ html{
     font-family: 'arial unicode ms';
   }
 }
-// .cursor,
-//   .follower {
-//     border-radius: 50%;
-//     position: absolute;
-//     top: 0;
-//     left: 0; 
-//     pointer-events: none;
-// }
-
 
 .wrapper{
   width: 100%;
@@ -38,27 +29,19 @@ html{
     background-color: rgba(3, 3, 3, 0.26);
     width: 100%;
     height: 13.5vh;
-    // position: absolute;
     z-index: 3;
     box-shadow: rgba(255, 255, 255, 0.295) 0px 2px 4px;
-    // background-color: rgb(255, 255, 255);
-    // background-color: rgb(34, 34, 34);
-    // position: fixed;
-    // box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
     .header-middle{
       width: 80%;
       height: 80%;
       margin: 0 auto;
-      // background-color: red;
       &__top{
-        // background-color: red;
         width: 100%;
         padding:10px 0 0 0;
         height: 5vh;
         &__icon{ 
           width: 160px;
           height: 50px;
-          // background-color: #333;
           .link{
             .goaldiary{
               width: 100%;
@@ -75,17 +58,13 @@ html{
         height: 40%;
         width: 100%;
         display: flex;
-        // background-color: aqua;
         &__left{
           width: 25vw;
           height: 100%;
-          // background-color: aquamarine;
           box-sizing: border-box;
           display: flex;
           &__login{
-            // display: block;
             font-weight: 600;
-            // line-height: 36px;
             white-space: nowrap;
             margin: 0 10px;
             background-color: rgb(234, 53, 45);
@@ -107,7 +86,6 @@ html{
             opacity: 0.6;
           }
           &__logout{
-            // display: block;
             font-weight: 600;
             white-space: nowrap;
             margin: 0 10px;
@@ -130,11 +108,9 @@ html{
             opacity:0.6;
           }
           &__sigiup{
-            // display: block;
             font-size: 14px;
             font-weight: 600;
             white-space: nowrap;
-            // line-height: 36px;
             margin: 0 10px;
             background-color: navy;
             color: rgb(255, 255, 255);
@@ -154,13 +130,10 @@ html{
         }
         &__right{
           width: 25vw;
-          // box-sizing: border-box;
           margin-left: 35%;
-          // display: flex;
           &__image{
             width: 50%;
             height: 100%;
-            // background-color: #333;
             margin-left: 70%;
             display: flex;
             .user-image{
@@ -177,7 +150,6 @@ html{
               height: 100%;
               margin-left: 5px;
               padding: 10px;
-              // background-color: #333;
               .user-name{ 
                 font-size: 16px;
                 text-decoration: none;
@@ -195,22 +167,15 @@ html{
   }
   .header-nav{
     width: 100%;
-    // height: 50%;
     &__line{
-      // margin: 10px auto;
-      // width: 80%;
       height: 2vh;
       border: solid 1px #333;
-      // background-color: navy;
       border-radius: 10px;
-      // background-color: red;
       display: block;
-      // padding: .4em .8em;
       color: #333;
       text-align: center;
       padding: 20px 0;
       display: flex;
-      // width: 95%;
       &__home{
         width: 18%;
         height: 4vh;
@@ -231,19 +196,14 @@ html{
   .main{
     width: 100%;
     background-color: rgba(255, 255, 255, 0.836);
-    // display: flex;
     &__sidebar{
-      // position: sticky;
-      // display: inline-block;
       position: fixed; 
-      // top: 0;
       margin-top: 200px;
       width: 11%;
       margin-left: 30px;
       height: 100%;
       padding: 50px 40px 0 0;
       z-index: 2;
-      // display: flex;
       display: block;
       .side-bar-link{
         text-decoration: none;
@@ -289,22 +249,7 @@ html{
       .book{
         width: 100%;
         height: 160vh;
-        // -ms-filter: blur(3px);
-        // filter: blur(3px);
-
       }
-      // &__wrap-video{
-      //   width: 100vw;
-      //   height:100vh;
-      //   .video{
-      //     width: 100vw;
-      //     height:100vh;
-      //   }
-      // }
-      // \.movie{
-      //   width: 100px;
-      //   height: 100px;
-      // }
       &__middle{
         margin: 0 auto;
         padding-top: 150px;
@@ -321,7 +266,6 @@ html{
         }
       }
     }
-    // background-color: rgb(34, 34, 34);
     .main-middle{
       width: 75%;
       height: 100%;
@@ -330,13 +274,10 @@ html{
       &__diary{
         display: inline-block;
         width: 20%;
-        // border: solid 1px #333;
         height: 27vh;
         margin: 3vw 1vw 2vw 2vw;
         position: relative;
         box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
-        // z-index: 1;
-        // color: #FFFFFF;
         &__top{
           width: 100%;
           height: 70%;
@@ -350,7 +291,6 @@ html{
             .img:hover{
               opacity: 0.6;
             }
-            // background-color: #333;
             &__name{
               font-size: 12px;
               width: 10%;
@@ -387,20 +327,8 @@ html{
     }
   }
   .footer{
-    // position: absolute;
     bottom: 0;
-    height: 40vh;
-    width: 100vw;
     display: inline;
-    // position: fixed;
-    // .footer-top{
-    //   background-image: url("star.png");
-    //   // background-color: rgb(34, 34, 34);
-    //   color: rgb(255, 255, 255);
-    //   font-size: 12px;
-    //   padding: 0px 20px 10px;
-    //   height: 30vh;
-    // }
     .footer-bottom{
       background-color: rgba(24, 23, 23, 0.87);
       color: rgb(255, 255, 255);
@@ -411,7 +339,6 @@ html{
         width: 80%;
         height: 60%;
         margin: 0 auto;
-        // background-color: white;
         &__about{
           padding: 0px 40px 0px 0px;
           display: inline-block;
@@ -485,9 +412,6 @@ html{
                 color: rgb(255, 255, 255);
                 cursor: pointer;
               }
-              // .twitter:hover{
-              //   text-decoration: underline;
-              // }
               &__note{
                 opacity: 0.7;
                 margin:18px 0 0;
@@ -556,12 +480,8 @@ html{
         }
       }
       &__under{
-        // margin: 30px;
-        // width: 50%;
-        // height: 10vh;
         &__logo{
           padding: 20px 20px 20px 100px;
-          // background-color: #FFFFFF;
           width: 50%;
           height: 7vh;
           .goaldiary{
@@ -581,7 +501,6 @@ html{
     position: fixed;
     z-index: 2;
     text-decoration: none;
-    // background-color: #333;
     .foot-btn{
       width: 150px;
       height: 120px;
@@ -610,8 +529,6 @@ html{
   }
 }
 
-
-
 // alert-------------------------------------------
 .alert {
   color: white;
@@ -620,416 +537,3 @@ html{
   height: 3vh;
 }
 // ------------------------------------------------
-
-// // indexーーーーーーーーーーーーーーーーーーーーーーーーー
-// body{
-//   font-family: 'arial unicode ms';
-// }
-// // 部分テンプレート  header-----------------------------------
-// .top-header{
-//   height: 18vh;
-//   width: 100vw;
-//   border-bottom: 1px solid #e6e6e6;
-//   .header-line{
-//     box-shadow: 10px 11px 10px rgba(0,0,0,0.4);
-//     background-color: #EEEEEE;
-//     height: 10vh;
-//     border-bottom: 1px solid #453523;
-//     .header-right{
-//       width: 30%;
-//       height: 100%;
-//       float:right;
-//       .user-prf{
-//         width:15vw;
-//         height: 10vh;
-//         float: right;
-//         margin-right: 8vw;
-//         .user-image{
-//           width: 4vw;
-//           height: 8vh;
-//           margin-top:1vh;
-//           border-radius:50%;
-//           float: right;
-//         }
-//         .name{
-//           width: 7vw;
-//           height: 60%;
-//           margin-top: 3.5vh;
-//           margin-left: 3vw;
-//           .user-name{
-//             color: black;
-//             font-size: 2vh;
-//             float: right;
-//           }
-//         }
-//       }
-//     }
-//     .header-left{
-//       width: 30%;
-//       height: 100%;
-//       float: left;
-//       margin-top: 0;
-//       .log-out{
-//         color: #DEB887;
-//       }
-//       .log-in{
-//         color: #DEB887;
-//       }
-//     }
-//   }
-//   .activemessage{
-//     height: 0.8vh;
-//     margin: 0 auto;
-//     background-color: #453523;
-//     border-bottom: 3px solid #ae8c5f;
-//   }
-//   .my-parts ul {
-//     list-style: none;
-//     margin: 0;
-//     padding: 0;
-//     display: inline;
-  
-//     &::after {
-//       content: "";
-//       clear: both;
-//     }
-  
-//     li {
-//       float: left;
-//       .user-name{
-//         color: #DEB887;
-//       }
-//       &:first-child {
-//         border-left: none;
-//       }
-  
-//       a {
-//         display: block;
-
-//         // padding: .4em .8em;
-//         margin: 1vh 11vw;
-//         text-decoration: none;
-//         color: #333;
-//         background: #fff;
-//         text-align: center;
-//         width: 95%;
-//         .toukou{
-//           font-size: 1vh;
-//           color: #453523;
-//           float:right;
-//         }
-//         &:hover {
-//           background: #eee;
-//         }
-//       }
-//     }
-//   }
-// } 
-//   // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-// .wrapper{
-//   background-color: #EEEEEE;
-//   height: 100vh;
-//   width: 100vw;
-//   margin: 0 auto;
-//   position: relative;
-//   .header{
-//     &__left{
-//         float: left;
-//         width: 20vw;
-//         height: 10vh;
-//         background-color: #FFFFFF;
-//     }
-//   }
-//   // 部分テンプレートーーーーーーーーーーーーーーーーーーーーーーーーーーー
-//   .diaries{
-//     height: 95%;
-//     width: 85vw;
-//     overflow: scroll;
-//     margin: 0 auto;
-//     background-color:#FFFFFF;
-//     .paginate{
-//       color: black;
-//       width: 80%;
-//     }
-//     .diary{
-//         display: inline-block;
-//         width: 30%;
-//       .card-list{
-//         padding: 4vh 4vw 4vh 3vw;
-//         width: 100%;
-//         color:white;
-//         .card-item{
-//           display: inline-block;
-//           width: 92%;
-//           .card-img{
-//             position: relative;
-//             box-shadow: 0 0 5px #cccccc;
-//             cursor: pointer;
-//             .img{
-//               width: 100%;
-//               height: 25vh;
-//               border-radius: 5%;
-//               -webkit-transition: all 1s ease;
-//               transition: all 1s ease;
-//               -webkit-filter: blur(0px);
-//               filter: blur(0px);
-//             }
-//             .img:hover{
-//               -webkit-filter: blur(4px);
-//               filter: blur(4px);
-//             }
-//           }
-//           .card-title{
-//             color: #453523;
-//             font-size: 20px;
-//             text-align: center;
-//             height: 3vh;
-//             font-weight:bold;
-//           }
-//           .card-content{
-//             color: #453523;
-//             display: inline;
-//             a{
-//               color: #453523;
-//             }
-//             .content-name{
-//               float: right;
-//               color: #DEB887;
-//               .name{
-//                 color: #DEB887;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   // ーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーーー
-//   .footer{
-//     height: 5vh;
-//     width: 100%;
-//     background-color:#ffffff;
-//     bottom: 0;
-//     display: flex;
-//     position: absolute;
-//     .footer-last{
-//       height: 5vh;
-//       width: 50%;
-//       bottom: 0%;
-//       margin: 0 auto;
-//       p{
-//         margin-top: 2vh;
-//         color: #ffffff;
-//         margin-left: 15vw;
-//         size: 1px;
-//       }
-//     }
-//   }
-// }
-// // -------------------------------------------------------
-
-// // 新規投稿ページ-----------------------------------------
-// .contents{
-//   width: 80%;
-//   height: 80%;
-//   margin: 0 auto;
-//   margin-top: 30px;
-//   background-color: #ffffff;
-//   padding: 0;
-//   text-align: center;
-//   font-size: 40px;
-//   position: relative;
-//   p{
-//     font-size: 30px;
-//     margin-top: 0;
-//     color: #453523;
-//     font-weight: bolder;
-//   }
-//   .image-space{
-//     .button{
-//       width: 10vw;
-//       height: 6vh;
-//     }
-//   }
-//   .posts{
-//     width: 80vw;
-//     height: 40vh;
-//     .content{
-//       width: 80%;
-//       height: 80%;
-//       margin: 20px 0px 0px 0px;
-//       border: solid 3px #EEEEEE;
-//       font-size: 20px;
-//     }
-//   }
-//   .foot{
-//     width: 100%;
-//     height: 20vh;
-//     position: absolute;
-//     bottom: 0px;
-//     .form2{
-//       margin-top:20vh;
-//       box-shadow: none;      
-//       color: #7f4600;     
-//       background: #EEEEEE;    
-//       display: inline-block;
-//       border-radius : 5%;        
-//       font-size : 15pt;       
-//       text-align : center;      
-//       cursor : pointer;    
-//       padding: 12px 12px;   
-//       background : #7f4600;    
-//       color: #ffffff;    
-//       line-height: 1em;     
-//       transition: .3s;        
-//       box-shadow : 2px 2px 19px #666666;  
-//       border: 2px solid #7f4600;    
-//     }
-//   }
-// }
-// // ---------------------------------------------------------
-
-// // ユーザープロフィール-----------------------------------------
-// .wrap{
-//   height: 35vh;
-//   .user-main{
-//     .user-top{
-//       .user-image{
-//         width: 100vw;
-//         height: 100%;
-//         .img-profile{
-//           width: 16vw;
-//           height: 27vh;
-//           border-radius:70%;
-//           margin-left: 10vw;
-//           margin-top: 2vh;
-//           border: 4px solid #EEEEEE;
-//         }
-//           .user-profile{
-//             width:50vw;
-//             height: 18vh;
-//             margin-right:18vw ;
-//             margin-top: 7vh;
-//             border: 2px solid #EEEEEE;
-//             float: right;
-//             .user-add{
-//               width: 11vw;
-//               height: 15%;
-//               margin-top: 12vh;
-//               float: right;
-//               .profi{
-//                 color: #7f4600;
-//               }
-//             }
-//           }
-//       }           
-//     }
-//   }
-// }
-// // ------------------------------------------------------------
-// // show---------------------------------------------------------
-//   .wrapper-down{
-//     height: calc(100%-119.34px);
-//     padding: 0 10vw;
-//     background-color: #EEEEEE;
-//     .content-image{
-//       height: 100%;
-//       background-color:#ffffff;
-//       overflow: scroll;
-//       .wrapper-image{
-//         height: 30vh;
-//         width: 50vw;
-//         .image5{
-//           margin: 5vh 26vh;
-//           height: 50vh;
-//           width: 50vw;
-//           border: 3px solid #DEB887;
-//         }
-//       }
-//       .wrapper-content{
-//         height: 30%;
-//         margin-top:30vh;
-//         padding: 0vh 5vw 5vh 5vw;
-//         .top-title{
-//           height: 5vh;
-//           text-align: center;
-//           font-size: 2vw;
-//           color: #333;
-//         }
-//       }
-//       .time{
-//         color: grey;
-//         margin-left: 1vw;
-//       }
-//       .comment-wrap{
-//         height: 20vh;
-//         .iine{
-//           color: red;
-//           width: 10vw;
-//           height: 10vh;
-//           form{
-//             width: 5vw;
-//             height: 7vh;
-//             text-align: center;
-//             margin-left: 1vw;
-//             input{
-//               width: 10vw;
-//             }
-//           }
-//         }
-//         .comments{
-//           width: 40vw;
-//           height: 10vh;
-//           margin: 0 auto;
-//           text-align: center;
-//           textarea{
-//             text-align: center;
-//             width: 40vw;
-//             border: 3px solid #EEEEEE;
-//           }
-//           input{
-//             border: 2px solid #EEEEEE;
-//           }
-//         }
-//         .comment-part{
-//           height: 20%;
-//           text-align: center;
-//           a{
-//           }
-//           strong{
-//             font-size: 1.5vh;
-//           }
-//         }
-//       }
-//       .button-12{
-//         height: 5vh;
-//         margin: 0 auto;
-//         display: block;
-//       }
-//     }
-//   }
-
-// // ----------------------------------------------------------
-
-// // 自己紹介作成------------------------------------------------
-// .wr{
-//   width:100vw;
-//   height:80vh;
-//   .wr1{
-//     width: 60%;
-//     margin: 0 auto;
-//     .intro{
-//       margin-top: 5vh;
-//       height: 40vh;
-//       width: 100%;
-//     }
-//     .send{
-//       margin-top: 2vh;
-//       width: 10vw;
-//       height: 6vh;
-//       background-color: #7f4600;
-//       box-shadow: 2px 2px 2px 2px rgba(0,0,0,0.4);
-//       border-radius: 10%;
-//     }
-//   }
-// }

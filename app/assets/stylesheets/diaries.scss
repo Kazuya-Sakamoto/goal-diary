@@ -1,6 +1,4 @@
 .contents{
-//   width: 100vw;
-//   height: 150vh;
   background-color: #EEEEEE;
   &__top{
     width: 100%;
@@ -9,8 +7,7 @@
       margin: 0 auto;
       width: 30%;
       height: 100%;
-      padding: 10px;
-    //   background-color: red;
+      padding: 10px;  
       .goaldiary{
         width: 60%;
         height: 60%;
@@ -73,7 +70,6 @@
         }
       }
       &__text{
-        // width: 86%;
         height: 50vh;
         padding: 45px;
         .content{
@@ -88,20 +84,14 @@
         width: 86%;
         height: 10vh;
         padding: 100px 50px;
-        // position: relative;
-        // background-color: red;
         &__btn{
           background: rgba(3, 118, 250, 0.562);
           border: 1px solid rgba(3, 118, 250, 0.562);
           color: #fff;
           margin: 0px 0 0;
           display: block;
-          // height: 5vh;
-          // text-align: center;
-          // height: 100px;
           font-size: 14px;
           padding: 10px;
-          // font-size: 100px;
           position: relative;
           text-align: center;
           .hidden{

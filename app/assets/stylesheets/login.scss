@@ -7,7 +7,6 @@
     background-color: rgba(3, 3, 3, 0);
     box-shadow: rgba(0, 0, 0, 0.842) 0px 2px 4px;
     margin-bottom: 10px;
-    // position: fixed;
     .goal{
       margin-top: 10px;
       margin-left: 200px;
@@ -25,7 +24,6 @@
       width: 70vw;
       height: 100%;
       margin: 0 auto;
-    //   background-color: rgba(0, 0, 0, 0.068);
       &__top{
         height: 10vh;
         width: 70%;
@@ -45,7 +43,6 @@
         width: 70%;
         height: 100%;
         margin: 0 auto;
-        // background-color: red;
         &__top{
           width: 100%;
           height: 45vh;
@@ -63,16 +60,13 @@
             width: 70%;
             height: 50vh;
             margin: 0 auto;
-            // background-color: red;
             .field{
               margin: 0 auto;
               width: 80%;
               height: 10vh;
               padding: 15px;
-            //   background-color: red;
               .mail{
                 font-size: 20px;
-                // color: white;
               }
               .mail-box{
                 margin-top: 10px;
@@ -81,7 +75,6 @@
               }
               .pass{
                 font-size: 20px;
-                // color: white;
                 margin-top: 30px;
               }
               .pass-box{
