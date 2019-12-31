@@ -1,0 +1,77 @@
+- flash.each do |diary_type, diary|
+  %div{:class => "alert alert-#{diary_type}"}
+    = diary
+.wraper
+  .wraper__header 
+    = link_to root_path, class: 'link' do
+      = image_tag 'logo.png', class: 'goal'
+  .wraper__container
+    .wraper__container__middle
+      .wraper__container__middle__top
+        .wraper__container__middle__top__text
+          %h2 sign in
+      .wraper__container__middle__content
+        .wraper__container__middle__content__top
+          = image_tag 'booklike.png', class:'book'
+        .wraper__container__middle__content__under
+          .wraper__container__middle__content__under__middle
+            = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+              .field
+                = f.label :ニックネーム, class:'name'
+                %br/
+                = f.text_field :nickname, placeholder: :'demo', autofocus: true, class: 'box'
+              .field
+                = f.label :email, class: 'mail'
+                %br/
+                = f.email_field :email, autofocus: true, autocomplete: "email", class: 'mail-box'
+              .field 
+                = f.label :password, class: 'pass'
+                %br/
+                = f.password_field :password, autocomplete: "current-password", class: 'pass-box'
+              .field
+                = f.label :確認
+                %br/
+                = f.password_field :password_confirmation, placeholder: :'sample', autocomplete: "new-password", class: 'box'
+              .field
+                = f.label :プロフィールの画像
+                = f.file_field :image, placeholder: :画像, class: 'box'
+              .field
+                = f.label :目標はなんですか？
+                = f.text_field :goal, placeholder: :例）〜まで, class: 'box'
+              .actions
+                = f.submit "Sign up", class: 'btn'
+
+-# .new-wrapper
+-#   %h2 新規登録
+-#   .header-yes
+-#     .header-line
+-#   = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+-#     = render "devise/shared/error_messages", resource: resource
+-#     .field
+-#       = f.label :ニックネーム
+-#       %br/
+-#       = f.text_field :nickname, placeholder: :'sample', autofocus: true
+-#     .field
+-#       = f.label :メールアドレス
+-#       %br/
+-#       = f.email_field :email, placeholder: :'sample@sample', autofocus: true, autocomplete: "email"
+-#     .field
+-#       = f.label :パスワード
+-#       - if @minimum_password_length
+-#         %em
+-#           (#{@minimum_password_length} characters minimum)
+-#       %br/
+-#       = f.password_field :password, placeholder: :'sample', autocomplete: "new-password"
+-#     .field
+-#       = f.label :確認
+-#       %br/
+-#       = f.password_field :password_confirmation, placeholder: :'sample', autocomplete: "new-password"
+-#     .field
+-#       = f.label :プロフィールの画像
+-#       = f.file_field :image, placeholder: :画像, class: :button
+-#     .field
+-#       = f.label :目標はなんですか？
+-#       = f.text_field :goal, placeholder: :例）〜まで, class: :goal
+-#     .actions
+-#       = f.submit "Sign up"
+-#   = render "devise/shared/links"
