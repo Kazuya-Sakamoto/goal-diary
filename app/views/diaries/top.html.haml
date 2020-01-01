@@ -1,0 +1,68 @@
+!!!
+%html{:lang => "ja"}
+  %head
+    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
+    %meta{:charset => "UTF-8"}/
+    %meta{:content => "IE=edge", "http-equiv" => "X-UA-Compatible"}/
+    %title 企業・ビジネスサイト向け 無料ホームページテンプレート tp_biz53
+    %meta{:content => "width=device-width, initial-scale=1", :name => "viewport"}/
+    %meta{:content => "ここにサイト説明を入れます", :name => "description"}/
+    %meta{:content => "キーワード１,キーワード２,キーワード３,キーワード４,キーワード５", :name => "keywords"}/
+    %link{:href => "css/style.css", :rel => "stylesheet"}/
+    %script{:src => "js/openclose.js"}
+    %script{:src => "js/fixmenu_pagetop.js"}
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+      <style>
+      </style>
+  %body.home
+    %header
+      %h1#logo
+        %a{:href => "index.html"}
+          %img{:alt => "SAMPLE COMPANY", :src => "images/logo.png"}/
+      %p#news
+        %span.newicon お知らせ
+        %a{:href => "news.html"} 2019/12/02…tp_biz53公開。
+    %nav#mainimg
+      %ul
+        %li#img1
+          = image_tag 'booktop.png', class:'top'
+          %a{:href => "http://18.176.181.116/"}
+            %span Goal-diary
+        %li#img2
+          = image_tag 'movie.png', class:'top'
+          %a{:href => "http://54.64.98.200"}
+            %span ECサイト
+        %li#img3
+          = image_tag 'bookstop.png', class:'top'
+          %a{:href => "https://zen-ya.com/"}
+            %span 出発前夜
+        %li#img4
+          = image_tag 'japan.png', class:'top'
+          %a{:href => "https://hatakura.net/"}
+            %span ハタクラ
+    %nav#menubar-s
+      %ul
+        %li
+          %a{:href => "index.html"} Home
+        %li
+          %a{:href => "news.html"} News
+        %li
+          %a{:href => "works.html"} Works
+        %li
+          %a{:href => "company.html"} Company
+        %li
+          %a{:href => "recruit.html"} Recruit
+        %li
+          %a{:href => "contact.html"} Contact
+    / ページの上部に戻る「↑」ボタン
+    %p.nav-fix-pos-pagetop
+      %a{:href => "#"} ↑
+    / メニュー開閉ボタン
+    #menubar_hdr.close
+    / メニューの開閉処理条件設定 800px以下
+    :javascript
+      if (OCwindowWidth() <= 800) {
+      	open_close("menubar_hdr", "menubar-s");
+      }
