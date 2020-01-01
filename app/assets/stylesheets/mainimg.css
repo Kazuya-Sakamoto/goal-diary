@@ -1,0 +1,109 @@
+@charset "utf-8";
+
+
+/*トップページのメインイメージ
+---------------------------------------------------------------------------*/
+/*アニメーションのキーフレーム。透明(opacity:0)から色がつく(opacity:1)までのアニメーションです。*/
+@keyframes img {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+/*画像全体を囲むブロック*/
+#mainimg {
+	background: #000;
+}
+#mainimg ul {
+	height: 100%;
+}
+/*画像１枚ごとの指定*/
+#mainimg li {
+	float: left;		/*左に回り込み*/
+	width: 25%;			/*幅。４つあるので100%÷4個=25%です。*/
+	height: 100%;		/*高さ*/
+	animation-name: img;		/*アニメーションのキーフレームの名前。上の@keyframesの横の名前です。*/
+	animation-duration: 0.5S;	/*アニメーション(上のkeyframe)を実行する時間。*/
+	animation-fill-mode: both;	/*アニメーションの待機中は最初のキーフレームを維持、終了後は最後のキーフレームを維持。*/
+	position: relative;
+	overflow: hidden;
+}
+#mainimg a {
+	display: block;text-decoration: none;
+	text-align: center;
+	height: 100%;
+	background: rgba(0,0,0,0.7);	/*背景色。0,0,0は黒のことで、0.7は色が70%でた状態のこと。*/
+}
+/*メニュー名。テキストがあるボックス。*/
+#mainimg a span {
+	display: block;
+	position: absolute;
+	left: 0px;		/*メニューに対して、左からの配置場所指定。*/
+	bottom: 45%;	/*メニューに対して、下からの配置場所指定。*/
+	width: 100%;
+	background: #000;				/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.5);	/*背景色。0,0,0は黒のことで、0.5は色が50%でた状態のこと。*/
+	padding: 30px 0;	/*上下、左右へのボックス内余白*/
+}
+/*マウスオン時*/
+#mainimg a:hover {
+	background: transparent;	/*マウスオン時に#mainimgのbackground(#000の黒)を透明にする。暗く見える写真が本来の色で出ます。*/
+}
+/*テキストのマウスオン時*/
+#mainimg a:hover span {
+	background: #ff0000;	/*背景色*/
+	color: #fff;			/*文字色*/
+}
+/*１枚目画像*/
+#img1 {
+	animation-delay: 2s;	/*2秒遅れてアニメーションをスタート*/
+	background: url(../images/1.jpg) no-repeat center center;			/*背景画像の読み込み（古いブラウザ用）*/
+	background: url(../images/1.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+/*２枚目画像*/
+#img2 {
+	animation-delay: 2.2s;	/*2.2秒遅れてアニメーションをスタート*/
+	background: url(../images/2.jpg) no-repeat center center;			/*背景画像の読み込み（古いブラウザ用）*/
+	background: url(../images/2.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+/*３枚目画像*/
+#img3 {
+	animation-delay: 2.4s;	/*2.4秒遅れてアニメーションをスタート*/
+	background: url(../images/3.jpg) no-repeat center center;			/*背景画像の読み込み（古いブラウザ用）*/
+	background: url(../images/3.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+/*４枚目画像*/
+#img4 {
+	animation-delay: 2.6s;	/*2.6秒遅れてアニメーションをスタート*/
+	background: url(../images/4.jpg) no-repeat center center;			/*背景画像の読み込み（古いブラウザ用）*/
+	background: url(../images/4.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+}
+
+
+/*縦向き画面の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (orientation: portrait){
+
+/*画像１枚ごとの指定*/
+#mainimg li {
+	width: 50%;			/*幅。２段にするので、１つあたり50%にする。*/
+	height: 50%;		/*高さ。２段にするので、半分の50%にする。*/
+}
+
+/*メニュー名。テキストがあるボックス。*/
+#mainimg a span {
+	left: 0px;		/*メニューに対して、左からの配置場所指定。*/
+	bottom: 0px;	/*メニューに対して、下からの配置場所指定。*/
+}
+
+}
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+#mainimg a {
+	background: transparent;
+}
+
+}
