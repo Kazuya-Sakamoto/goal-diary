@@ -6,6 +6,8 @@
 @import "./show.scss";
 @import "./login.scss";
 @import "./signin.scss";
+@import "./mainimg.css";
+@import "./style.css";
 
 html{
   width: 100%;
@@ -527,6 +529,14 @@ html{
       opacity: 0.7;
     }
   }
+}
+
+.top{
+  width: 360px;
+  height: 789px;
+}
+.top:hover{
+  opacity: 0.6;
 }
 
 // alert-------------------------------------------
