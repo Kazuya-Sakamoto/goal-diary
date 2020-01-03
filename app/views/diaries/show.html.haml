@@ -47,6 +47,7 @@
           %p
             %strong
               = c.text 
-                -# = image_tag current_user.image.url, class: 'user-image'
-                -# = link_to current_user.nickname, user_path, class: 'name'
+                - if user_signed_in?
+                  = image_tag current_user.image.url, class: 'user-image'
+                  = link_to current_user.nickname, user_path(@diary.user), class: 'name'
   = render partial: "footer"
