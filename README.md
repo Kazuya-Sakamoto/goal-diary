@@ -66,7 +66,24 @@ http://18.176.181.116/
 - belongs_to: user
 - has_many: comments
 - has_many: likes
-- has_many :likes, through: :likes
+- has_many: likes, through: :likes
+
+## category テーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||null: false|
+### Asociation
+- has_many: diary_categories
+- has_many: diaries, through: :diary_categories
+
+## diary_categries テーブル
+|Column|Type|Options|
+|------|----|-------|
+|diary_id|refrences|null: false, foregin_key :true|
+|categry_id|refrences|null: false, foregin_key :true|
+### Asociation
+- belong_to :diary
+- belong_to :category
 
 ## comments テーブル
 |Column|Type|Options|
