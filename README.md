@@ -11,7 +11,7 @@
 ### URL
 http://18.176.181.116/
 
-# 使用技術
+# Environment
 - Ruby 2.5.1
 - Rails 5.2.4
 - Haml
