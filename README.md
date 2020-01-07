@@ -17,6 +17,7 @@ http://18.176.181.116/
 - Haml
 - SCSS
 - JavaScript 
+- MySQL
 - jQuery 
 - ajax 非同期通信
 - AWS EC2, S3, 自動デプロイ
