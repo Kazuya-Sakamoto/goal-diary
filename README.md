@@ -49,8 +49,7 @@ http://18.176.181.116/
 - gem 'counter_culture', '~> 1.8'
 - gem 'kaminari'
 - gem 'font-awesome-sassc'
-
-gem 'jquery-rails'
+- gem 'jquery-rails'
 
 # Goal diary DB設計
 ## users テーブル
