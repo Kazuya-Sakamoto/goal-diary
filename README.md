@@ -51,6 +51,16 @@ http://18.176.181.116/
 - gem 'kaminari'
 - gem 'font-awesome-sassc'
 - gem 'jquery-rails'
+- gem 'pry-rails'
+- gem 'capistrano'
+- gem 'capistrano-rbenv'
+- gem 'capistrano-bundler'
+- gem 'capistrano-rails'
+- gem 'capistrano3-unicorn'
+- gem 'devise'
+- gem 'carrierwave'
+- gem 'fog-aws'
+- gem 'unicorn', '5.4.1'
 
 # Goal diary DB設計
 ## users テーブル
