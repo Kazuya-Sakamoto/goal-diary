@@ -8,6 +8,7 @@
 人生の幸福度は大きく変わる。
 少しでも日常の中で、何か目標に向き合いタスク管理をする。
 それを共有ができ、逆算で計算し、かつ管理ができるサイトです。
+
 ### URL
 http://18.176.181.116/
 
@@ -38,6 +39,18 @@ http://18.176.181.116/
 - コメント機能
 - 自動デプロイ
 - カテゴリー
+
+
+## gem
+- gem 'haml-rails'
+- gem 'pry-rails'
+- gem 'carrierwave'
+- gem 'devise'
+- gem 'counter_culture', '~> 1.8'
+- gem 'kaminari'
+- gem 'font-awesome-sassc'
+
+gem 'jquery-rails'
 
 # Goal diary DB設計
 ## users テーブル
