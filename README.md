@@ -21,8 +21,8 @@ http://18.176.181.116/
 - MySQL
 - jQuery 
 - ajax 非同期通信
-- AWS EC2, S3, 自動デプロイ
-- capistrano
+- AWS EC2, S3, 
+- capistrano (Automatic deployment)
 
 # Function
 - Log_in
@@ -38,7 +38,7 @@ http://18.176.181.116/
 - Calendar
 - Pagination
 - Comment
-- Automatic deployment(aws)
+- Automatic deployment(capistrano)
 - Category
 - Search
 
