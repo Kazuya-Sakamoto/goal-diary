@@ -24,22 +24,22 @@ http://18.176.181.116/
 - AWS EC2, S3, 自動デプロイ
 
 # Function
-- ログイン
-- ログアウト
-- 新規機登録
-- 新規投稿
-- 投稿編集
-- 投稿削除
-- プロフィール
-- プロフィール編集
-- いいね
-- 逆算
-- カレンダー
-- pagination
-- コメント機能
-- 自動デプロイ
-- カテゴリー
-
+- Log_in
+- Log_out
+- Sign_in
+- New post
+- Edit post
+- Destory post
+- profile
+- Edit profile
+- Likes
+- Back calculation(逆算)
+- Calendar
+- Pagination
+- Comment
+- Automatic deployment(aws)
+- Category
+- Search
 
 ## gem
 - gem 'haml-rails'
