@@ -6,6 +6,8 @@ class Diary < ApplicationRecord
     has_many :comments
     has_many :likes
     has_many :liked_users, through: :likes, source: :user
+    has_many :diary_categories
+    has_many :categories, through: :diary_categories
 
 # self をメソッドに付与する事で、インスタンスメソッドではなく、クラスメソッドとして定義する
     def date
@@ -16,5 +18,13 @@ class Diary < ApplicationRecord
 
     def dates(goal)
       dates = goal.to_date - Date.today
+    end
+
+    def self.search(search)
+      if search
+        Diary.where('content LIKE(?)', "%#{search}%")
+      else
+        Diary.all
+      end
     end
 end

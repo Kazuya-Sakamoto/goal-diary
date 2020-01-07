@@ -14,6 +14,11 @@
             = link_to "ログイン", new_user_session_path, class: 'log-in'
           .header-middle__bottom__left__sigiup
             = link_to "新規登録", new_user_registration_path, class: 'create'
+      .header-middle__bottom__middle
+        = form_with(url: diaries_searches_path, local: true, method: :get, class: "search-form") do |form|
+          = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+          = form.submit "検索", class: "search-btn"
+
       .header-middle__bottom__right
         .header-middle__bottom__right__image
           - if user_signed_in?

@@ -130,6 +130,34 @@ html{
             }
           }
         }
+        &__middle{
+          width: 100px;
+          height: 50px;
+          margin-right: 250px;
+          // background-color: red;
+          .search-input{
+            box-sizing: border-box;
+            position: relative;
+            border: 1px solid #999;
+            padding: 3px 10px;
+            border-radius: 20px;
+            height: 2.3em;
+            width: 260px;
+            overflow: hidden;
+          }
+          .search-btn{
+            cursor: pointer;
+            font-family: FontAwesome;
+            font-size: 1.3em;
+            border: none;
+            background: none;
+            color: #3879D9;
+            position: absolute;
+            width: 2.5em;
+            margin-left: 200px;
+            top: 65px;
+          }
+        }
         &__right{
           width: 25vw;
           margin-left: 35%;

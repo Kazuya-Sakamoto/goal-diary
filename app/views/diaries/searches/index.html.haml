@@ -1,0 +1,11 @@
+.wrapper
+  = render partial: "diaries/header"
+  .main
+    .main__sidebar
+      = render partial: "diaries/sidebar"
+    .main__center
+      = render partial: "diaries/image"
+    .main-middle
+      -# = render @diaries
+      = render partial: "diaries/diary", collection: @diaries
+    = render partial: "diaries/footer"

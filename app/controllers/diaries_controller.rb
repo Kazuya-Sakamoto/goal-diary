@@ -43,13 +43,17 @@ class DiariesController < ApplicationController
     redirect_to root_path
   end
 
-  def category
-    @diaries = Diary.where(category_id: params[:category_id]) 
+  # def category
+  #   @diaries = Diary.where(category_id: params[:category_id]) 
+  # end
+
+  def search
+    @posts = Pweet.search(params[:keyword])
   end
   
   private
   def diary_params
-    params.require(:diary).permit(:content, :image, :goal, :category_id).merge(user_id: current_user.id)
+    params.require(:diary).permit(:content, :image, :goal, category_ids: [] ).merge(user_id: current_user.id)
   end
 
   def set_find_diary
