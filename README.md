@@ -22,6 +22,7 @@ http://18.176.181.116/
 - jQuery 
 - ajax 非同期通信
 - AWS EC2, S3, 自動デプロイ
+- capistrano
 
 # Function
 - Log_in
