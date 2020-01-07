@@ -1,0 +1,2 @@
+module Diaries::SearchesHelper
+end

@@ -1,27 +1,28 @@
-.main__sidebar__link
-  .main__sidebar__link__box
-    = link_to "/diaries/category/1", class: 'side-bar-link' do
-      %li.main__sidebar__link__box__menu 夢
-.main__sidebar__link
-  .main__sidebar__link__box
-    = link_to "/diaries/category/2", class: 'side-bar-link' do
-      %li.main__sidebar__link__box__menu 仕事
-.main__sidebar__link
-  .main__sidebar__link__box
-    = link_to "/diaries/category/3", class: 'side-bar-link' do
-      %li.main__sidebar__link__box__menu 試験
-.main__sidebar__link
-  .main__sidebar__link__box
-    = link_to "/diaries/category/4", class: 'side-bar-link' do
-      %li.main__sidebar__link__box__menu 恋愛
-.main__sidebar__link
-  .main__sidebar__link__box
-    = link_to "/diaries/category/5", class: 'side-bar-link' do
-      %li.main__sidebar__link__box__menu スポーツ
-.main__sidebar__link
-  .main__sidebar__link__box
-    - if user_signed_in?
-      = link_to user_path(current_user),class: 'side-bar-link' do
-        %li.main__sidebar__link__box__menu マイページ
-    - else 
-      %li.main__sidebar__link__box__menu  マイページ
+-# .main__sidebar__link
+  -# .main__sidebar__link__box
+    -# = link_to "",diary_category_index_path(@diary), class: 'side-bar-link' do
+      -# %li.main__sidebar__link__box__menu 夢
+- Category.all.each do |category|
+  .main__sidebar__link
+    .main__sidebar__link__box
+      = link_to category_path(category.id), class: 'side-bar-link' do
+        %li.main__sidebar__link__box__menu #{category.name}
+-# .main__sidebar__link
+-#   .main__sidebar__link__box
+-#     = link_to "", class: 'side-bar-link' do
+-#       %li.main__sidebar__link__box__menu 試験
+-# .main__sidebar__link
+-#   .main__sidebar__link__box
+-#     = link_to "", class: 'side-bar-link' do
+-#       %li.main__sidebar__link__box__menu 恋愛
+-# .main__sidebar__link
+-#   .main__sidebar__link__box
+-#     = link_to "", class: 'side-bar-link' do
+-#       %li.main__sidebar__link__box__menu スポーツ
+-# .main__sidebar__link
+-#   .main__sidebar__link__box
+-#     - if user_signed_in?
+-#       = link_to user_path(current_user),class: 'side-bar-link' do
+-#         %li.main__sidebar__link__box__menu マイページ
+-#     - else 
+-#       %li.main__sidebar__link__box__menu  マイページ

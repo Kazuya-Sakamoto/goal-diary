@@ -1,0 +1,29 @@
+.wrapper  
+  .header
+    .header-middle
+      .header-middle__top
+        .header-middle__top__icon
+          = link_to root_path, class: 'link' do
+            = image_tag 'logo.png', class: 'goaldiary'
+      .header-middle__bottom
+        .header-middle__bottom__left
+          - if user_signed_in? 
+            .header-middle__bottom__left__logout
+              = link_to "ログアウト", destroy_user_session_path, method: :delete, class:'log-out'
+          - else
+            .header-middle__bottom__left__login
+              = link_to "ログイン", new_user_session_path, class: 'log-in'
+            .header-middle__bottom__left__sigiup
+              = link_to "新規登録", new_user_registration_path, class: 'create'
+        .header-middle__bottom__middle
+          = form_with(url: diaries_searches_path, local: true, method: :get, class: "search-form") do |form|
+            = form.text_field :keyword, placeholder: "投稿を検索する", class: "search-input"
+            = form.submit "検索", class: "search-btn"
+
+        .header-middle__bottom__right
+          .header-middle__bottom__right__image
+            - if user_signed_in?
+              = image_tag current_user.image.url, class: 'user-image'
+            .header-middle__bottom__right__image__name
+              - if user_signed_in?
+                = link_to current_user.nickname, user_path(current_user), class: 'user-name'

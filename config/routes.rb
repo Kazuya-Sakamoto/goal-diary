@@ -4,6 +4,10 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   end
   root to: 'diaries#index'
+  namespace :diaries do
+    resources :searches, only: :index
+  end
+  resources :categories, only: :show
   # root to: 'diaries#top'
   resources :diaries do
     resources :likes, only: [:create, :destroy]
