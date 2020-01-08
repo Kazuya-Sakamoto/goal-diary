@@ -12,6 +12,10 @@
 ### URL
 http://18.176.181.116/
 
+### sample_login_account
+- mail: sample@sample
+- pass: 1234567890
+
 # Environment
 - Ruby 2.5.1
 - Rails 5.2.4
