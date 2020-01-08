@@ -95,6 +95,9 @@ http://18.176.181.116/
 - has_many: comments
 - has_many: likes
 - has_many: likes, through: :likes
+- has_many :images, dependent: :destroy 
+- has_many :diary_categories
+- has_many :categories, through: :diary_categories
 
 ## category テーブル
 |Column|Type|Options|
@@ -112,6 +115,14 @@ http://18.176.181.116/
 ### Asociation
 - belong_to :diary
 - belong_to :category
+
+## images テーブル
+|Column|Type|Options|
+|------|----|-------|
+|image|string|default: "", null: false|
+|diary_id|refrences|null: false, foregin_key :true|
+### Asociation
+- belongs_to :diary
 
 ## comments テーブル
 |Column|Type|Options|
