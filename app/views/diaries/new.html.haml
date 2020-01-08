@@ -16,7 +16,7 @@
           = f.file_field :image, placeholder: :画像投稿, class: 'image', id: 'img'
         .contents__bottom__middle__category
           カテゴリー
-          = f.collection_check_boxes :category_ids, Category.all, :id, :name, class: "category"
+          = f.collection_check_boxes :category_ids, Category.all, :id, :name, id: "category"
         %label.contents__bottom__middle__text
           = f.text_area :content, placeholder: :１０００文字以内, class: :content
         .contents__bottom__middle__bottom
