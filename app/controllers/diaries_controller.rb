@@ -8,6 +8,7 @@ class DiariesController < ApplicationController
   
   def new
     @diary = Diary.new
+    2.times{@diary.images.build}
     if !user_signed_in?
       redirect_to new_user_registration_path, notice: '投稿には登録が必要です!'
     end
@@ -53,7 +54,14 @@ class DiariesController < ApplicationController
   
   private
   def diary_params
-    params.require(:diary).permit(:content, :image, :goal, category_ids: [] ).merge(user_id: current_user.id)
+    params.require(:diary).permit(
+      :content,
+      :image,
+      :goal,
+      category_ids: [],
+      images_attributes: [
+      :image]
+    ).merge(user_id: current_user.id)
   end
 
   def set_find_diary
