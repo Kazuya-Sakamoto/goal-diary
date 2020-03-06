@@ -10,7 +10,7 @@
       position: fixed;
       background-color: rgba(255, 255, 255, 0.13);
       width: 100%;
-      height: 13.5vh;
+      height: 102px;
       z-index: 3;
       box-shadow: rgba(255, 255, 255, 0.295) 0px 2px 4px;
       .header-middle{
@@ -283,8 +283,8 @@
         color: black;
         &__diary{
           display: inline-block;
-          width: 20%;
-          height: 27vh;
+          width: 220px;
+          height: 214px;
           margin: 3vw 1vw 2vw 2vw;
           position: relative;
           box-shadow: rgba(0, 0, 0, 0.28) 0px 2px 4px;
@@ -344,7 +344,7 @@
         color: rgb(0, 0, 0);
         font-size: 12px;
         padding: 0px 20px 10px;
-        height: 26vh;
+        // height: 26vh;
         &__middle{
           width: 80%;
           height: 60%;
