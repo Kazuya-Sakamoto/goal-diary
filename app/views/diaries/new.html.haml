@@ -16,10 +16,10 @@
           = f.fields_for :images do |i|
             = i.file_field :image, multiple: true, class: 'image', id: 'img'
           -# = f.file_field :image, placeholder: :画像投稿, class: 'image', id: 'img'
-        %label.contents__bottom__middle__content2{for: 'img'}
-          = f.fields_for :images do |i|
-            = i.label :image, class: "dropzone-box", for: "upload-image" 
-            = i.file_field :image, multiple: true, class: 'image', id: 'img' 
+        -# %label.contents__bottom__middle__content2{for: 'img'}
+          -# = f.fields_for :images do |i|
+          -#   = i.label :image, class: "dropzone-box", for: "upload-image" 
+          -#   = i.file_field :image, multiple: true, class: 'image', id: 'img' 
         .contents__bottom__middle__category
           カテゴリー
           = f.collection_check_boxes :category_ids, Category.all, :id, :name, id: "category"

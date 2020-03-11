@@ -58,9 +58,9 @@ class DiariesController < ApplicationController
       :content,
       :image,
       :goal,
-      category_ids: [],
-      images_attributes: [
-      :image]
+      category_ids: []
+      # images_attributes: [
+      # :image]
     ).merge(user_id: current_user.id)
   end
 
