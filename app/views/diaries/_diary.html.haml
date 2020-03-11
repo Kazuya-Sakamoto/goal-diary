@@ -2,8 +2,9 @@
   .main-middle__diary__top
     = link_to diary_path(diary.id), class: 'post' do
       .main-middle__diary__top__image
-        - if diary.image.present?
-          = image_tag diary.image.url, class: 'img', alt: "顔写真1" 
+        - if diary.images[0].present?
+          -# = image_tag diary.images[0].image.url, size: '188x188'
+          = image_tag diary.images[0].image.url, class: 'img', alt: "image" 
         - else
           = image_tag "no.png", class: 'img'
     .main-middle__diary__bottom

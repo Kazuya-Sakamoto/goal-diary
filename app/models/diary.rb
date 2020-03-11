@@ -1,6 +1,6 @@
 class Diary < ApplicationRecord
-    validates :goal, :content, presence: true
-    validates :content, length: { in: 1..1000 }, presence: true
+    has_many :images, dependent: :destroy 
+    accepts_nested_attributes_for :images
     mount_uploader :image, ImagesUploader
     belongs_to :user
     has_many :comments
@@ -8,6 +8,9 @@ class Diary < ApplicationRecord
     has_many :liked_users, through: :likes, source: :user
     has_many :diary_categories
     has_many :categories, through: :diary_categories
+
+    validates :goal, :content, presence: true
+    validates :content, length: { in: 1..1000 }, presence: true
 
 # self をメソッドに付与する事で、インスタンスメソッドではなく、クラスメソッドとして定義する
     def date

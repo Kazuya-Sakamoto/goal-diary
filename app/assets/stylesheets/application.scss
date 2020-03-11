@@ -1,9 +1,10 @@
 @import "./reset";
-@import "./diaries";
+@import "./new";
 @import "./users";
 @import "./show.scss";
 @import "./login.scss";
 @import "./signin.scss";
+@import "./diary.scss";
 // @import "./mainimg.css";
 // @import "./style.css";
 
@@ -573,3 +574,4 @@ html{
   height: 3vh;
 }
 // ------------------------------------------------
+}

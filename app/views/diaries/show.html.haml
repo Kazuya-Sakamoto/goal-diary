@@ -13,8 +13,8 @@
         日
         .content__middle__top__middle
       .content__middle__middle
-        - if @diary.image.present?
-          = image_tag @diary.image.url, class: 'image5', alt: "顔写真1"
+        - if @diary.images[0].present?
+          = image_tag @diary.images[0].image.url, class: 'image5', alt: "顔写真1"
         - else
           = image_tag "no.png", class: 'image5'
         .content__middle__middle__right
